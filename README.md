@@ -1,6 +1,6 @@
 # Women's Travel Guide: Global Perspectives on the Wellbeing of Women
 
-**PLEASE NOTE THIS PROJECT WAS ORIGINALLY BASED ON A REPOSITORY COMPLETED AS PART OF DSAN5200 AT GEORGETOWN UNIVERSITY. IT HAS BEEN COPIED TO MY PERSONAL GITHUB FOR VIEWING PURPOSES.**
+**Please note this project was orginally completed as part of DSAN5200 at Georgetown University. The repo has been copied to my personal GitHub for viewing purposes.**
 
 ## Team 19
 * Lizzie Healy
