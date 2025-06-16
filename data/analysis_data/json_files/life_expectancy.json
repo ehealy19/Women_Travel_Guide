@@ -1,0 +1,499 @@
+[
+  {
+    "Country":"Albania",
+    "Year":2019,
+    "Life expectancy at birth (years)":79.9,
+    "Life expectancy at age 60 (years)":21.9,
+    "ISO":"ALB"
+  },
+  {
+    "Country":"Argentina",
+    "Year":2019,
+    "Life expectancy at birth (years)":79.5,
+    "Life expectancy at age 60 (years)":23.1,
+    "ISO":"ARG"
+  },
+  {
+    "Country":"Australia",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.8,
+    "Life expectancy at age 60 (years)":26.8,
+    "ISO":"AUS"
+  },
+  {
+    "Country":"Austria",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.8,
+    "Life expectancy at age 60 (years)":25.6,
+    "ISO":"AUT"
+  },
+  {
+    "Country":"Bahrain",
+    "Year":2019,
+    "Life expectancy at birth (years)":77.0,
+    "Life expectancy at age 60 (years)":19.4,
+    "ISO":"BHR"
+  },
+  {
+    "Country":"Belgium",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.5,
+    "Life expectancy at age 60 (years)":25.6,
+    "ISO":"BEL"
+  },
+  {
+    "Country":"Bulgaria",
+    "Year":2019,
+    "Life expectancy at birth (years)":78.6,
+    "Life expectancy at age 60 (years)":22.0,
+    "ISO":"BGR"
+  },
+  {
+    "Country":"Burkina Faso",
+    "Year":2019,
+    "Life expectancy at birth (years)":65.2,
+    "Life expectancy at age 60 (years)":18.1,
+    "ISO":"BFA"
+  },
+  {
+    "Country":"Cote d'Ivoire",
+    "Year":2019,
+    "Life expectancy at birth (years)":65.8,
+    "Life expectancy at age 60 (years)":18.7,
+    "ISO":"CIV"
+  },
+  {
+    "Country":"Canada",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.1,
+    "Life expectancy at age 60 (years)":26.4,
+    "ISO":"CAN"
+  },
+  {
+    "Country":"Chile",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.2,
+    "Life expectancy at age 60 (years)":25.9,
+    "ISO":"CHL"
+  },
+  {
+    "Country":"Colombia",
+    "Year":2019,
+    "Life expectancy at birth (years)":81.9,
+    "Life expectancy at age 60 (years)":25.3,
+    "ISO":"COL"
+  },
+  {
+    "Country":"Costa Rica",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.4,
+    "Life expectancy at age 60 (years)":26.4,
+    "ISO":"CRI"
+  },
+  {
+    "Country":"Croatia",
+    "Year":2019,
+    "Life expectancy at birth (years)":81.6,
+    "Life expectancy at age 60 (years)":23.7,
+    "ISO":"HRV"
+  },
+  {
+    "Country":"Cyprus",
+    "Year":2019,
+    "Life expectancy at birth (years)":85.1,
+    "Life expectancy at age 60 (years)":26.4,
+    "ISO":"CYP"
+  },
+  {
+    "Country":"Czechia",
+    "Year":2019,
+    "Life expectancy at birth (years)":81.9,
+    "Life expectancy at age 60 (years)":24.0,
+    "ISO":"CZE"
+  },
+  {
+    "Country":"Denmark",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.0,
+    "Life expectancy at age 60 (years)":24.9,
+    "ISO":"DNK"
+  },
+  {
+    "Country":"Ecuador",
+    "Year":2019,
+    "Life expectancy at birth (years)":80.5,
+    "Life expectancy at age 60 (years)":24.3,
+    "ISO":"ECU"
+  },
+  {
+    "Country":"Estonia",
+    "Year":2019,
+    "Life expectancy at birth (years)":82.6,
+    "Life expectancy at age 60 (years)":25.0,
+    "ISO":"EST"
+  },
+  {
+    "Country":"Finland",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.0,
+    "Life expectancy at age 60 (years)":25.8,
+    "ISO":"FIN"
+  },
+  {
+    "Country":"France",
+    "Year":2019,
+    "Life expectancy at birth (years)":85.1,
+    "Life expectancy at age 60 (years)":27.2,
+    "ISO":"FRA"
+  },
+  {
+    "Country":"Gabon",
+    "Year":2019,
+    "Life expectancy at birth (years)":69.7,
+    "Life expectancy at age 60 (years)":19.3,
+    "ISO":"GAB"
+  },
+  {
+    "Country":"Georgia",
+    "Year":2019,
+    "Life expectancy at birth (years)":77.8,
+    "Life expectancy at age 60 (years)":21.0,
+    "ISO":"GEO"
+  },
+  {
+    "Country":"Germany",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.8,
+    "Life expectancy at age 60 (years)":26.9,
+    "ISO":"DEU"
+  },
+  {
+    "Country":"Ghana",
+    "Year":2019,
+    "Life expectancy at birth (years)":69.2,
+    "Life expectancy at age 60 (years)":18.9,
+    "ISO":"GHA"
+  },
+  {
+    "Country":"Greece",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.6,
+    "Life expectancy at age 60 (years)":25.5,
+    "ISO":"GRC"
+  },
+  {
+    "Country":"Guinea",
+    "Year":2019,
+    "Life expectancy at birth (years)":62.3,
+    "Life expectancy at age 60 (years)":17.2,
+    "ISO":"GIN"
+  },
+  {
+    "Country":"Hungary",
+    "Year":2019,
+    "Life expectancy at birth (years)":79.6,
+    "Life expectancy at age 60 (years)":22.3,
+    "ISO":"HUN"
+  },
+  {
+    "Country":"Iceland",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.9,
+    "Life expectancy at age 60 (years)":25.5,
+    "ISO":"ISL"
+  },
+  {
+    "Country":"India",
+    "Year":2019,
+    "Life expectancy at birth (years)":72.2,
+    "Life expectancy at age 60 (years)":19.5,
+    "ISO":"IND"
+  },
+  {
+    "Country":"Ireland",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.5,
+    "Life expectancy at age 60 (years)":25.3,
+    "ISO":"IRL"
+  },
+  {
+    "Country":"Israel",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.4,
+    "Life expectancy at age 60 (years)":26.0,
+    "ISO":"ISR"
+  },
+  {
+    "Country":"Italy",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.9,
+    "Life expectancy at age 60 (years)":26.5,
+    "ISO":"ITA"
+  },
+  {
+    "Country":"Jordan",
+    "Year":2019,
+    "Life expectancy at birth (years)":78.8,
+    "Life expectancy at age 60 (years)":22.1,
+    "ISO":"JOR"
+  },
+  {
+    "Country":"Kazakhstan",
+    "Year":2019,
+    "Life expectancy at birth (years)":77.6,
+    "Life expectancy at age 60 (years)":21.4,
+    "ISO":"KAZ"
+  },
+  {
+    "Country":"Kyrgyzstan",
+    "Year":2019,
+    "Life expectancy at birth (years)":77.3,
+    "Life expectancy at age 60 (years)":21.7,
+    "ISO":"KGZ"
+  },
+  {
+    "Country":"Lao People's Democratic Republic",
+    "Year":2019,
+    "Life expectancy at birth (years)":70.9,
+    "Life expectancy at age 60 (years)":18.9,
+    "ISO":"LAO"
+  },
+  {
+    "Country":"Latvia",
+    "Year":2019,
+    "Life expectancy at birth (years)":79.8,
+    "Life expectancy at age 60 (years)":23.0,
+    "ISO":"LVA"
+  },
+  {
+    "Country":"Lithuania",
+    "Year":2019,
+    "Life expectancy at birth (years)":80.4,
+    "Life expectancy at age 60 (years)":23.5,
+    "ISO":"LTU"
+  },
+  {
+    "Country":"Malaysia",
+    "Year":2019,
+    "Life expectancy at birth (years)":77.1,
+    "Life expectancy at age 60 (years)":20.6,
+    "ISO":"MYS"
+  },
+  {
+    "Country":"Malta",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.8,
+    "Life expectancy at age 60 (years)":25.9,
+    "ISO":"MLT"
+  },
+  {
+    "Country":"Mauritius",
+    "Year":2019,
+    "Life expectancy at birth (years)":77.3,
+    "Life expectancy at age 60 (years)":22.0,
+    "ISO":"MUS"
+  },
+  {
+    "Country":"Mexico",
+    "Year":2019,
+    "Life expectancy at birth (years)":78.9,
+    "Life expectancy at age 60 (years)":23.1,
+    "ISO":"MEX"
+  },
+  {
+    "Country":"Mongolia",
+    "Year":2019,
+    "Life expectancy at birth (years)":72.8,
+    "Life expectancy at age 60 (years)":18.5,
+    "ISO":"MNG"
+  },
+  {
+    "Country":"Montenegro",
+    "Year":2019,
+    "Life expectancy at birth (years)":78.7,
+    "Life expectancy at age 60 (years)":21.3,
+    "ISO":"MNE"
+  },
+  {
+    "Country":"Morocco",
+    "Year":2019,
+    "Life expectancy at birth (years)":74.3,
+    "Life expectancy at age 60 (years)":19.6,
+    "ISO":"MAR"
+  },
+  {
+    "Country":"Nepal",
+    "Year":2019,
+    "Life expectancy at birth (years)":72.7,
+    "Life expectancy at age 60 (years)":19.2,
+    "ISO":"NPL"
+  },
+  {
+    "Country":"New Zealand",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.5,
+    "Life expectancy at age 60 (years)":25.8,
+    "ISO":"NZL"
+  },
+  {
+    "Country":"North Macedonia",
+    "Year":2019,
+    "Life expectancy at birth (years)":76.9,
+    "Life expectancy at age 60 (years)":19.6,
+    "ISO":"MKD"
+  },
+  {
+    "Country":"Norway",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.1,
+    "Life expectancy at age 60 (years)":25.8,
+    "ISO":"NOR"
+  },
+  {
+    "Country":"Pakistan",
+    "Year":2019,
+    "Life expectancy at birth (years)":66.7,
+    "Life expectancy at age 60 (years)":17.8,
+    "ISO":"PAK"
+  },
+  {
+    "Country":"Philippines",
+    "Year":2019,
+    "Life expectancy at birth (years)":73.6,
+    "Life expectancy at age 60 (years)":19.6,
+    "ISO":"PHL"
+  },
+  {
+    "Country":"Poland",
+    "Year":2019,
+    "Life expectancy at birth (years)":81.9,
+    "Life expectancy at age 60 (years)":24.3,
+    "ISO":"POL"
+  },
+  {
+    "Country":"Portugal",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.4,
+    "Life expectancy at age 60 (years)":26.3,
+    "ISO":"PRT"
+  },
+  {
+    "Country":"Republic of Moldova",
+    "Year":2019,
+    "Life expectancy at birth (years)":77.1,
+    "Life expectancy at age 60 (years)":20.9,
+    "ISO":"MDA"
+  },
+  {
+    "Country":"Romania",
+    "Year":2019,
+    "Life expectancy at birth (years)":79.3,
+    "Life expectancy at age 60 (years)":22.4,
+    "ISO":"ROU"
+  },
+  {
+    "Country":"Russian Federation",
+    "Year":2019,
+    "Life expectancy at birth (years)":78.0,
+    "Life expectancy at age 60 (years)":22.2,
+    "ISO":"RUS"
+  },
+  {
+    "Country":"Saudi Arabia",
+    "Year":2019,
+    "Life expectancy at birth (years)":76.1,
+    "Life expectancy at age 60 (years)":20.8,
+    "ISO":"SAU"
+  },
+  {
+    "Country":"Senegal",
+    "Year":2019,
+    "Life expectancy at birth (years)":70.1,
+    "Life expectancy at age 60 (years)":18.9,
+    "ISO":"SEN"
+  },
+  {
+    "Country":"Serbia",
+    "Year":2019,
+    "Life expectancy at birth (years)":78.3,
+    "Life expectancy at age 60 (years)":21.1,
+    "ISO":"SRB"
+  },
+  {
+    "Country":"Slovakia",
+    "Year":2019,
+    "Life expectancy at birth (years)":81.4,
+    "Life expectancy at age 60 (years)":23.9,
+    "ISO":"SVK"
+  },
+  {
+    "Country":"Slovenia",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.1,
+    "Life expectancy at age 60 (years)":25.6,
+    "ISO":"SVN"
+  },
+  {
+    "Country":"South Africa",
+    "Year":2019,
+    "Life expectancy at birth (years)":68.3,
+    "Life expectancy at age 60 (years)":20.5,
+    "ISO":"ZAF"
+  },
+  {
+    "Country":"Spain",
+    "Year":2019,
+    "Life expectancy at birth (years)":85.7,
+    "Life expectancy at age 60 (years)":27.3,
+    "ISO":"ESP"
+  },
+  {
+    "Country":"Sweden",
+    "Year":2019,
+    "Life expectancy at birth (years)":84.0,
+    "Life expectancy at age 60 (years)":25.6,
+    "ISO":"SWE"
+  },
+  {
+    "Country":"Switzerland",
+    "Year":2019,
+    "Life expectancy at birth (years)":85.1,
+    "Life expectancy at age 60 (years)":26.6,
+    "ISO":"CHE"
+  },
+  {
+    "Country":"Thailand",
+    "Year":2019,
+    "Life expectancy at birth (years)":81.0,
+    "Life expectancy at age 60 (years)":24.8,
+    "ISO":"THA"
+  },
+  {
+    "Country":"United Kingdom of Great Britain and Northern Ireland",
+    "Year":2019,
+    "Life expectancy at birth (years)":83.0,
+    "Life expectancy at age 60 (years)":25.2,
+    "ISO":"GBR"
+  },
+  {
+    "Country":"United Republic of Tanzania",
+    "Year":2019,
+    "Life expectancy at birth (years)":69.3,
+    "Life expectancy at age 60 (years)":19.1,
+    "ISO":"TZA"
+  },
+  {
+    "Country":"United States of America",
+    "Year":2019,
+    "Life expectancy at birth (years)":80.7,
+    "Life expectancy at age 60 (years)":24.4,
+    "ISO":"USA"
+  },
+  {
+    "Country":"Uzbekistan",
+    "Year":2019,
+    "Life expectancy at birth (years)":75.2,
+    "Life expectancy at age 60 (years)":19.8,
+    "ISO":"UZB"
+  }
+]

@@ -1,0 +1,184 @@
+Country,Year,Life expectancy at birth (years),Life expectancy at age 60 (years),ISO
+Afghanistan,2019,63.2,15.1,AFG
+Albania,2019,79.9,21.9,ALB
+Algeria,2019,78.1,22.6,DZA
+Angola,2019,65.5,18.6,AGO
+Antigua and Barbuda,2019,78.0,21.3,ATG
+Argentina,2019,79.5,23.1,ARG
+Armenia,2019,79.2,22.1,ARM
+Australia,2019,84.8,26.8,AUS
+Austria,2019,83.8,25.6,AUT
+Azerbaijan,2019,74.1,18.3,AZE
+Bahamas,2019,76.6,22.4,BHS
+Bahrain,2019,77.0,19.4,BHR
+Bangladesh,2019,75.6,21.5,BGD
+Barbados,2019,77.7,21.8,BRB
+Belarus,2019,79.6,22.5,BLR
+Belgium,2019,83.5,25.6,BEL
+Belize,2019,77.8,22.9,BLZ
+Benin,2019,65.7,18.5,BEN
+Bhutan,2019,74.4,19.9,BTN
+Bolivia (Plurinational State of),2019,73.1,19.1,BOL
+Bosnia and Herzegovina,2019,79.1,21.6,BIH
+Botswana,2019,65.5,18.0,BWA
+Brazil,2019,79.4,23.5,BRA
+Brunei Darussalam,2019,75.4,19.4,BRN
+Bulgaria,2019,78.6,22.0,BGR
+Burkina Faso,2019,65.2,18.1,BFA
+Burundi,2019,66.1,17.6,BDI
+Cote d'Ivoire,2019,65.8,18.7,CIV
+Cabo Verde,2019,77.9,21.8,CPV
+Cambodia,2019,72.7,19.1,KHM
+Cameroon,2019,64.5,18.3,CMR
+Canada,2019,84.1,26.4,CAN
+Central African Republic,2019,56.3,14.9,CAF
+Chad,2019,61.3,17.3,TCD
+Chile,2019,83.2,25.9,CHL
+China,2019,80.5,23.1,CHN
+Colombia,2019,81.9,25.3,COL
+Comoros,2019,68.9,18.8,COM
+Congo,2019,65.6,17.1,COG
+Costa Rica,2019,83.4,26.4,CRI
+Croatia,2019,81.6,23.7,HRV
+Cuba,2019,80.3,23.2,CUB
+Cyprus,2019,85.1,26.4,CYP
+Czechia,2019,81.9,24.0,CZE
+Democratic People's Republic of Korea,2019,75.7,20.8,PRK
+Democratic Republic of the Congo,2019,64.8,17.9,COD
+Denmark,2019,83.0,24.9,DNK
+Djibouti,2019,67.8,19.0,DJI
+Dominican Republic,2019,76.2,22.4,DOM
+Ecuador,2019,80.5,24.3,ECU
+Egypt,2019,74.1,19.1,EGY
+El Salvador,2019,79.1,23.6,SLV
+Equatorial Guinea,2019,63.6,18.8,GNQ
+Eritrea,2019,67.1,16.8,ERI
+Estonia,2019,82.6,25.0,EST
+Eswatini,2019,63.2,17.7,SWZ
+Ethiopia,2019,70.5,19.4,ETH
+Fiji,2019,70.3,17.5,FJI
+Finland,2019,84.0,25.8,FIN
+France,2019,85.1,27.2,FRA
+Gabon,2019,69.7,19.3,GAB
+Gambia,2019,67.7,18.0,GMB
+Georgia,2019,77.8,21.0,GEO
+Germany,2019,84.8,26.9,DEU
+Ghana,2019,69.2,18.9,GHA
+Greece,2019,83.6,25.5,GRC
+Grenada,2019,75.3,20.3,GRD
+Guatemala,2019,75.0,21.4,GTM
+Guinea,2019,62.3,17.2,GIN
+Guinea-Bissau,2019,63.0,16.7,GNB
+Guyana,2019,69.4,18.1,GUY
+Haiti,2019,64.8,17.0,HTI
+Honduras,2019,73.2,19.1,HND
+Hungary,2019,79.6,22.3,HUN
+Iceland,2019,83.9,25.5,ISL
+India,2019,72.2,19.5,IND
+Indonesia,2019,73.3,19.1,IDN
+Iran (Islamic Republic of),2019,79.1,22.5,IRN
+Iraq,2019,75.0,20.7,IRQ
+Ireland,2019,83.5,25.3,IRL
+Israel,2019,84.4,26.0,ISR
+Italy,2019,84.9,26.5,ITA
+Jamaica,2019,77.7,22.6,JAM
+Japan,2019,86.9,28.6,JPN
+Jordan,2019,78.8,22.1,JOR
+Kazakhstan,2019,77.6,21.4,KAZ
+Kenya,2019,68.4,19.1,KEN
+Kiribati,2019,62.8,14.6,KIR
+Kuwait,2019,83.9,25.9,KWT
+Kyrgyzstan,2019,77.3,21.7,KGZ
+Lao People's Democratic Republic,2019,70.9,18.9,LAO
+Latvia,2019,79.8,23.0,LVA
+Lebanon,2019,79.2,22.4,LBN
+Lesotho,2019,54.2,15.2,LSO
+Liberia,2019,65.0,18.0,LBR
+Libya,2019,77.3,21.9,LBY
+Lithuania,2019,80.4,23.5,LTU
+Luxembourg,2019,84.2,25.8,LUX
+Madagascar,2019,66.6,17.3,MDG
+Malawi,2019,68.9,19.0,MWI
+Malaysia,2019,77.1,20.6,MYS
+Maldives,2019,80.8,23.1,MDV
+Mali,2019,63.4,17.6,MLI
+Malta,2019,83.8,25.9,MLT
+Mauritania,2019,68.7,18.9,MRT
+Mauritius,2019,77.3,22.0,MUS
+Mexico,2019,78.9,23.1,MEX
+Micronesia (Federated States of),2019,66.0,15.6,FSM
+Mongolia,2019,72.8,18.5,MNG
+Montenegro,2019,78.7,21.3,MNE
+Morocco,2019,74.3,19.6,MAR
+Mozambique,2019,61.7,17.8,MOZ
+Myanmar,2019,72.2,19.6,MMR
+Namibia,2019,68.4,19.3,NAM
+Nepal,2019,72.7,19.2,NPL
+Netherlands (Kingdom of the),2019,83.1,25.1,NLD
+New Zealand,2019,83.5,25.8,NZL
+Nicaragua,2019,77.9,21.9,NIC
+Niger,2019,64.6,17.8,NER
+Nigeria,2019,64.1,18.9,NGA
+North Macedonia,2019,76.9,19.6,MKD
+Norway,2019,84.1,25.8,NOR
+Oman,2019,75.3,18.5,OMN
+Pakistan,2019,66.7,17.8,PAK
+Panama,2019,82.1,26.0,PAN
+Papua New Guinea,2019,67.4,17.6,PNG
+Paraguay,2019,78.8,23.5,PRY
+Peru,2019,81.3,25.1,PER
+Philippines,2019,73.6,19.6,PHL
+Poland,2019,81.9,24.3,POL
+Portugal,2019,84.4,26.3,PRT
+Qatar,2019,76.6,18.4,QAT
+Republic of Korea,2019,86.1,27.9,KOR
+Republic of Moldova,2019,77.1,20.9,MDA
+Romania,2019,79.3,22.4,ROU
+Russian Federation,2019,78.0,22.2,RUS
+Rwanda,2019,71.2,19.2,RWA
+Saint Lucia,2019,77.7,22.9,LCA
+Saint Vincent and the Grenadines,2019,75.3,21.6,VCT
+Samoa,2019,71.8,18.3,WSM
+Sao Tome and Principe,2019,72.0,18.6,STP
+Saudi Arabia,2019,76.1,20.8,SAU
+Senegal,2019,70.1,18.9,SEN
+Serbia,2019,78.3,21.1,SRB
+Seychelles,2019,77.1,21.5,SYC
+Sierra Leone,2019,61.9,17.4,SLE
+Singapore,2019,85.5,27.2,SGP
+Slovakia,2019,81.4,23.9,SVK
+Slovenia,2019,84.1,25.6,SVN
+Solomon Islands,2019,67.9,16.3,SLB
+Somalia,2019,59.2,16.0,SOM
+South Africa,2019,68.3,20.5,ZAF
+South Sudan,2019,64.8,18.9,SSD
+Spain,2019,85.7,27.3,ESP
+Sri Lanka,2019,79.8,22.6,LKA
+Sudan,2019,70.8,19.4,SDN
+Suriname,2019,74.6,20.5,SUR
+Sweden,2019,84.0,25.6,SWE
+Switzerland,2019,85.1,26.6,CHE
+Syrian Arab Republic,2019,74.3,19.3,SYR
+Turkiye,2019,80.7,23.2,TUR
+Tajikistan,2019,71.5,17.2,TJK
+Thailand,2019,81.0,24.8,THA
+Timor-Leste,2019,71.4,18.9,TLS
+Togo,2019,67.2,18.6,TGO
+Tonga,2019,75.6,21.2,TON
+Trinidad and Tobago,2019,79.9,25.0,TTO
+Tunisia,2019,79.2,22.8,TUN
+Turkmenistan,2019,73.0,20.1,TKM
+Uganda,2019,70.1,19.4,UGA
+Ukraine,2019,77.8,21.7,UKR
+United Arab Emirates,2019,78.4,21.7,ARE
+United Kingdom of Great Britain and Northern Ireland,2019,83.0,25.2,GBR
+United Republic of Tanzania,2019,69.3,19.1,TZA
+United States of America,2019,80.7,24.4,USA
+Uruguay,2019,80.6,24.0,URY
+Uzbekistan,2019,75.2,19.8,UZB
+Vanuatu,2019,68.3,16.7,VUT
+Venezuela (Bolivarian Republic of),2019,78.2,23.6,VEN
+Viet Nam,2019,78.1,22.0,VNM
+Yemen,2019,68.9,18.7,YEM
+Zambia,2019,65.4,18.0,ZMB
+Zimbabwe,2019,63.6,17.0,ZWE

@@ -1,0 +1,54 @@
+flagCode,Country,Paid Maternity Leave (Weeks),MaternityLeave_PaymentDetails_txt_YearFree,MaternityLeave_PayRate_txt_YearFree,Female Labor Rate,Expected Years in School,Tertiary Enrollment Gender Parity
+BG,Bulgaria,58.4,Social Security,Full,49.1,12.243,1.192
+NO,Norway,49.0,Social Security - another option is 59 weeks at 80% pay,Full,60.3,13.672,1.328
+GR,Greece,43.0,"Social Security - 17 weeks are paid at 100%, the rest is 75% wages",Partially Paid,43.9,13.288,1.051
+HR,Croatia,30.0,Social Security,Full,45.3,13.552,1.275
+IE,Ireland,26.0,Social Security - 70* or fixed rate,Partially Paid,55.8,13.92,1.134
+NZ,New Zealand,26.0,Social Security,Full,64.7,13.779,1.353
+IS,Iceland,26.0,Social Security,80% of Wages,70.6,13.545,1.495
+HU,Hungary,24.0,Social Security,Full,48.5,12.962,1.197
+IT,Italy,21.0,Social Security,80% of Wages,40.7,13.32,1.275
+PL,Poland,20.0,Social Security,Full,48.3,13.455,1.349
+CO,Colombia,18.0,Employer,Full,57.5,12.975,1.126
+CA,Canada,18.0,"55% of the employee's salary for up to 12 months, or an extended option of 33% for up to 18 months",Partially Paid,60.7,13.71,1.265
+CL,Chile,18.0,Social Security,Full,52.0,13.055,1.144
+DK,Denmark,18.0,Social Security,Full,58.2,13.472,1.272
+LT,Lithuania,18.0,Employer,80% of Wages,56.2,13.889,1.264
+CR,Costa Rica,17.0,50% Employer / 50% S.S.,Full,48.2,13.251,1.186
+FR,France,16.0,Social Security,Full,50.6,13.824,1.204
+ES,Spain,16.0,Social Security,Full,51.6,13.086,1.184
+RO,Romania,16.0,Social Security - 50% to 94%,Partially Paid,44.9,11.912,1.205
+AT,Austria,16.0,Social Security,Full,55.0,13.467,1.185
+LV,Latvia,16.0,Social Security,80% of Wages,55.3,13.718,1.28
+CY,Cyprus,16.0,Social Security,75% of Wages,57.8,13.62,1.059
+PH,Philippines,15.0,Social Security,Full,46.2,13.151,1.231
+BE,Belgium,15.0,"82% for 30 days, 75%* thereafter",75% of Wages,48.5,13.567,1.253
+FI,Finland,15.0,Social Security,80% of Wages,55.3,13.745,1.172
+MN,Mongolia,14.3,Social Insurance Fund,Full,53.1,13.199,1.335
+EE,Estonia,14.3,Social Security,Full,56.8,13.53,1.327
+DE,Germany,14.0,S.S.to ceiling; employer pays difference,Full,55.3,13.345,1.038
+MY,Malaysia,14.0,Social Security,Full,50.9,12.689,1.223
+BF,Burkina Faso,14.0,S.S. & Employer,Full,58.2,7.004,0.555
+SN,Senegal,14.0,Social Security,Full,35.1,7.922,0.756
+GN,Guinea,14.0,50% Employer / 50% S.S.,Full,62.8,6.161,0.404
+SE,Sweden,14.0,"Social Security - 450 days paid parental leave: 75%, 360 days; 90 days, flat rate",Partially Paid,61.4,13.904,1.403
+IL,Israel,14.0,Social Security,Full,59.7,13.908,1.322
+GA,Gabon,14.0,Social Security,Full,43.8,8.538,1.201
+MT,Malta,13.0,Social Security,Full,45.9,13.51,1.315
+TH,Thailand,12.6,"100 for 45 days then 50% for 15 days; Employer for 45 days, then Social Security",Partially Paid,58.9,12.669,1.272
+AR,Argentina,12.6,Social Security,Full,50.6,13.061,1.416
+IN,India,12.0,Employer / S.S.,Full,20.3,11.213,1.079
+PK,Pakistan,12.0,Employer,Full,22.2,8.707,0.958
+MX,Mexico,12.0,Social Security,Full,44.3,12.979,1.058
+ZA,South Africa,12.0,Unemployment Insurance,45% of Wages,49.7,10.149,1.336
+MA,Morocco,12.0,Social Security,Full,21.4,10.523,1.012
+GH,Ghana,12.0,Employer,50% of Wages,63.5,12.23,0.825
+AU,Australia,12.0,Social Security,Partially Paid,60.2,13.62,1.28
+EC,Ecuador,12.0,25% Employer / 75% S.S.,Full,55.3,13.156,1.14
+MU,Mauritius,12.0,Employer,Full,45.1,12.721,1.281
+SA,Saudi Arabia,10.0,Employer - 50% or 100%,Partially Paid,22.3,12.346,1.114
+JO,Jordan,10.0,Employer,Full,14.4,11.394,1.266
+CH,Switzerland,8.0,Employer,Full,62.9,13.218,1.066
+NP,Nepal,7.3,Employer,Full,82.9,12.223,1.063
+PT,Portugal,6.0,Social Security,Full,53.9,13.829,1.167
+BH,Bahrain,6.0,Employer,Full,45.0,13.052,1.47

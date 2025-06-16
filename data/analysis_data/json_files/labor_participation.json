@@ -1,0 +1,499 @@
+[
+  {
+    "Country":"Albania",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":46.6,
+    "TIME_PERIOD":2020,
+    "ISO":"ALB"
+  },
+  {
+    "Country":"Argentina",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":50.6,
+    "TIME_PERIOD":2020,
+    "ISO":"ARG"
+  },
+  {
+    "Country":"Australia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":60.2,
+    "TIME_PERIOD":2020,
+    "ISO":"AUS"
+  },
+  {
+    "Country":"Austria",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":55.0,
+    "TIME_PERIOD":2020,
+    "ISO":"AUT"
+  },
+  {
+    "Country":"Bahrain",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":45.0,
+    "TIME_PERIOD":2020,
+    "ISO":"BHR"
+  },
+  {
+    "Country":"Sweden",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":61.4,
+    "TIME_PERIOD":2020,
+    "ISO":"SWE"
+  },
+  {
+    "Country":"Switzerland",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":62.9,
+    "TIME_PERIOD":2020,
+    "ISO":"CHE"
+  },
+  {
+    "Country":"Thailand",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":58.9,
+    "TIME_PERIOD":2020,
+    "ISO":"THA"
+  },
+  {
+    "Country":"North Macedonia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":42.9,
+    "TIME_PERIOD":2020,
+    "ISO":"MKD"
+  },
+  {
+    "Country":"United Kingdom of Great Britain and Northern Ireland",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":57.7,
+    "TIME_PERIOD":2020,
+    "ISO":"GBR"
+  },
+  {
+    "Country":"United Republic of Tanzania",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":79.4,
+    "TIME_PERIOD":2020,
+    "ISO":"TZA"
+  },
+  {
+    "Country":"United States of America",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":55.9,
+    "TIME_PERIOD":2020,
+    "ISO":"USA"
+  },
+  {
+    "Country":"Burkina Faso",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":58.2,
+    "TIME_PERIOD":2020,
+    "ISO":"BFA"
+  },
+  {
+    "Country":"Uzbekistan",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":52.3,
+    "TIME_PERIOD":2020,
+    "ISO":"UZB"
+  },
+  {
+    "Country":"Malaysia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":50.9,
+    "TIME_PERIOD":2020,
+    "ISO":"MYS"
+  },
+  {
+    "Country":"Malta",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":45.9,
+    "TIME_PERIOD":2020,
+    "ISO":"MLT"
+  },
+  {
+    "Country":"Mauritius",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":45.1,
+    "TIME_PERIOD":2020,
+    "ISO":"MUS"
+  },
+  {
+    "Country":"Mexico",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":44.3,
+    "TIME_PERIOD":2020,
+    "ISO":"MEX"
+  },
+  {
+    "Country":"Mongolia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":53.1,
+    "TIME_PERIOD":2020,
+    "ISO":"MNG"
+  },
+  {
+    "Country":"Republic of Moldova",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":40.0,
+    "TIME_PERIOD":2020,
+    "ISO":"MDA"
+  },
+  {
+    "Country":"Montenegro",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":46.6,
+    "TIME_PERIOD":2020,
+    "ISO":"MNE"
+  },
+  {
+    "Country":"Morocco",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":21.4,
+    "TIME_PERIOD":2020,
+    "ISO":"MAR"
+  },
+  {
+    "Country":"Serbia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":47.3,
+    "TIME_PERIOD":2020,
+    "ISO":"SRB"
+  },
+  {
+    "Country":"Slovakia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":52.0,
+    "TIME_PERIOD":2020,
+    "ISO":"SVK"
+  },
+  {
+    "Country":"Slovenia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":53.0,
+    "TIME_PERIOD":2020,
+    "ISO":"SVN"
+  },
+  {
+    "Country":"South Africa",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":49.7,
+    "TIME_PERIOD":2020,
+    "ISO":"ZAF"
+  },
+  {
+    "Country":"Spain",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":51.6,
+    "TIME_PERIOD":2020,
+    "ISO":"ESP"
+  },
+  {
+    "Country":"Belgium",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":48.5,
+    "TIME_PERIOD":2020,
+    "ISO":"BEL"
+  },
+  {
+    "Country":"Bulgaria",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":49.1,
+    "TIME_PERIOD":2020,
+    "ISO":"BGR"
+  },
+  {
+    "Country":"Nepal",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":82.9,
+    "TIME_PERIOD":2020,
+    "ISO":"NPL"
+  },
+  {
+    "Country":"New Zealand",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":64.7,
+    "TIME_PERIOD":2020,
+    "ISO":"NZL"
+  },
+  {
+    "Country":"Norway",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":60.3,
+    "TIME_PERIOD":2020,
+    "ISO":"NOR"
+  },
+  {
+    "Country":"Pakistan",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":22.2,
+    "TIME_PERIOD":2020,
+    "ISO":"PAK"
+  },
+  {
+    "Country":"Canada",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":60.7,
+    "TIME_PERIOD":2020,
+    "ISO":"CAN"
+  },
+  {
+    "Country":"Chile",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":52.0,
+    "TIME_PERIOD":2020,
+    "ISO":"CHL"
+  },
+  {
+    "Country":"Colombia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":57.5,
+    "TIME_PERIOD":2020,
+    "ISO":"COL"
+  },
+  {
+    "Country":"Costa Rica",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":48.2,
+    "TIME_PERIOD":2020,
+    "ISO":"CRI"
+  },
+  {
+    "Country":"Croatia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":45.3,
+    "TIME_PERIOD":2020,
+    "ISO":"HRV"
+  },
+  {
+    "Country":"Cyprus",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":57.8,
+    "TIME_PERIOD":2020,
+    "ISO":"CYP"
+  },
+  {
+    "Country":"Czechia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":52.8,
+    "TIME_PERIOD":2020,
+    "ISO":"CZE"
+  },
+  {
+    "Country":"Denmark",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":58.2,
+    "TIME_PERIOD":2020,
+    "ISO":"DNK"
+  },
+  {
+    "Country":"Ecuador",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":55.3,
+    "TIME_PERIOD":2020,
+    "ISO":"ECU"
+  },
+  {
+    "Country":"Estonia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":56.8,
+    "TIME_PERIOD":2020,
+    "ISO":"EST"
+  },
+  {
+    "Country":"Kyrgyzstan",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":44.5,
+    "TIME_PERIOD":2020,
+    "ISO":"KGZ"
+  },
+  {
+    "Country":"Lao People's Democratic Republic",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":76.8,
+    "TIME_PERIOD":2020,
+    "ISO":"LAO"
+  },
+  {
+    "Country":"Latvia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":55.3,
+    "TIME_PERIOD":2020,
+    "ISO":"LVA"
+  },
+  {
+    "Country":"Lithuania",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":56.2,
+    "TIME_PERIOD":2020,
+    "ISO":"LTU"
+  },
+  {
+    "Country":"Hungary",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":48.5,
+    "TIME_PERIOD":2020,
+    "ISO":"HUN"
+  },
+  {
+    "Country":"Iceland",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":70.6,
+    "TIME_PERIOD":2020,
+    "ISO":"ISL"
+  },
+  {
+    "Country":"India",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":20.3,
+    "TIME_PERIOD":2020,
+    "ISO":"IND"
+  },
+  {
+    "Country":"Ireland",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":55.8,
+    "TIME_PERIOD":2020,
+    "ISO":"IRL"
+  },
+  {
+    "Country":"Israel",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":59.7,
+    "TIME_PERIOD":2020,
+    "ISO":"ISR"
+  },
+  {
+    "Country":"Italy",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":40.7,
+    "TIME_PERIOD":2020,
+    "ISO":"ITA"
+  },
+  {
+    "Country":"C\u00f4te d\u2019Ivoire",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":48.3,
+    "TIME_PERIOD":2020,
+    "ISO":"CIV"
+  },
+  {
+    "Country":"Kazakhstan",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":62.2,
+    "TIME_PERIOD":2020,
+    "ISO":"KAZ"
+  },
+  {
+    "Country":"Jordan",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":14.4,
+    "TIME_PERIOD":2020,
+    "ISO":"JOR"
+  },
+  {
+    "Country":"Finland",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":55.3,
+    "TIME_PERIOD":2020,
+    "ISO":"FIN"
+  },
+  {
+    "Country":"France",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":50.6,
+    "TIME_PERIOD":2020,
+    "ISO":"FRA"
+  },
+  {
+    "Country":"Gabon",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":43.8,
+    "TIME_PERIOD":2020,
+    "ISO":"GAB"
+  },
+  {
+    "Country":"Georgia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":57.4,
+    "TIME_PERIOD":2020,
+    "ISO":"GEO"
+  },
+  {
+    "Country":"Germany",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":55.3,
+    "TIME_PERIOD":2020,
+    "ISO":"DEU"
+  },
+  {
+    "Country":"Ghana",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":63.5,
+    "TIME_PERIOD":2020,
+    "ISO":"GHA"
+  },
+  {
+    "Country":"Greece",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":43.9,
+    "TIME_PERIOD":2020,
+    "ISO":"GRC"
+  },
+  {
+    "Country":"Guinea",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":62.8,
+    "TIME_PERIOD":2020,
+    "ISO":"GIN"
+  },
+  {
+    "Country":"Philippines",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":46.2,
+    "TIME_PERIOD":2020,
+    "ISO":"PHL"
+  },
+  {
+    "Country":"Poland",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":48.3,
+    "TIME_PERIOD":2020,
+    "ISO":"POL"
+  },
+  {
+    "Country":"Portugal",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":53.9,
+    "TIME_PERIOD":2020,
+    "ISO":"PRT"
+  },
+  {
+    "Country":"Romania",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":44.9,
+    "TIME_PERIOD":2020,
+    "ISO":"ROU"
+  },
+  {
+    "Country":"Russian Federation",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":54.4,
+    "TIME_PERIOD":2020,
+    "ISO":"RUS"
+  },
+  {
+    "Country":"Saudi Arabia",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":22.3,
+    "TIME_PERIOD":2020,
+    "ISO":"SAU"
+  },
+  {
+    "Country":"Senegal",
+    "SERIES Description":"Labour Force Participation Rate by Sex, 15+ - ILO Modelled Estimates, Nov. 2019 (%)",
+    "Female_Labor_Rate_Percent":35.1,
+    "TIME_PERIOD":2020,
+    "ISO":"SEN"
+  }
+]

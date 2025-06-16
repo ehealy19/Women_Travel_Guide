@@ -1,0 +1,641 @@
+[
+  {
+    "Country":"Albania",
+    "Year":2019,
+    "Primary":1.03,
+    "Primary and Secondary":1.019,
+    "Secondary":1.011,
+    "Tertiary":1.32,
+    "ISO":"ALB"
+  },
+  {
+    "Country":"Argentina",
+    "Year":2019,
+    "Primary":1.002,
+    "Primary and Secondary":1.021,
+    "Secondary":1.04,
+    "Tertiary":1.416,
+    "ISO":"ARG"
+  },
+  {
+    "Country":"Australia",
+    "Year":2019,
+    "Primary":0.999,
+    "Primary and Secondary":0.964,
+    "Secondary":0.934,
+    "Tertiary":1.28,
+    "ISO":"AUS"
+  },
+  {
+    "Country":"Austria",
+    "Year":2019,
+    "Primary":0.993,
+    "Primary and Secondary":0.981,
+    "Secondary":0.975,
+    "Tertiary":1.185,
+    "ISO":"AUT"
+  },
+  {
+    "Country":"Bahrain",
+    "Year":2019,
+    "Primary":0.994,
+    "Primary and Secondary":1.038,
+    "Secondary":1.089,
+    "Tertiary":1.47,
+    "ISO":"BHR"
+  },
+  {
+    "Country":"Belgium",
+    "Year":2019,
+    "Primary":1.011,
+    "Primary and Secondary":1.079,
+    "Secondary":1.128,
+    "Tertiary":1.253,
+    "ISO":"BEL"
+  },
+  {
+    "Country":"Bulgaria",
+    "Year":2019,
+    "Primary":0.993,
+    "Primary and Secondary":0.985,
+    "Secondary":0.982,
+    "Tertiary":1.192,
+    "ISO":"BGR"
+  },
+  {
+    "Country":"Burkina Faso",
+    "Year":2019,
+    "Primary":0.995,
+    "Primary and Secondary":1.007,
+    "Secondary":1.033,
+    "Tertiary":0.555,
+    "ISO":"BFA"
+  },
+  {
+    "Country":"Canada",
+    "Year":2019,
+    "Primary":0.994,
+    "Primary and Secondary":1.002,
+    "Secondary":1.008,
+    "Tertiary":1.265,
+    "ISO":"CAN"
+  },
+  {
+    "Country":"Chile",
+    "Year":2019,
+    "Primary":0.972,
+    "Primary and Secondary":0.982,
+    "Secondary":0.992,
+    "Tertiary":1.144,
+    "ISO":"CHL"
+  },
+  {
+    "Country":"Colombia",
+    "Year":2019,
+    "Primary":0.967,
+    "Primary and Secondary":1.011,
+    "Secondary":1.051,
+    "Tertiary":1.126,
+    "ISO":"COL"
+  },
+  {
+    "Country":"Costa Rica",
+    "Year":2019,
+    "Primary":1.007,
+    "Primary and Secondary":1.041,
+    "Secondary":1.076,
+    "Tertiary":1.186,
+    "ISO":"CRI"
+  },
+  {
+    "Country":"Cote d'Ivoire",
+    "Year":2019,
+    "Primary":0.941,
+    "Primary and Secondary":0.884,
+    "Secondary":0.793,
+    "Tertiary":0.765,
+    "ISO":"CIV"
+  },
+  {
+    "Country":"Croatia",
+    "Year":2019,
+    "Primary":1.007,
+    "Primary and Secondary":1.039,
+    "Secondary":1.055,
+    "Tertiary":1.275,
+    "ISO":"HRV"
+  },
+  {
+    "Country":"Cyprus",
+    "Year":2019,
+    "Primary":0.993,
+    "Primary and Secondary":0.981,
+    "Secondary":0.969,
+    "Tertiary":1.059,
+    "ISO":"CYP"
+  },
+  {
+    "Country":"Czechia",
+    "Year":2019,
+    "Primary":1.005,
+    "Primary and Secondary":1.008,
+    "Secondary":1.01,
+    "Tertiary":1.283,
+    "ISO":"CZE"
+  },
+  {
+    "Country":"Denmark",
+    "Year":2019,
+    "Primary":0.998,
+    "Primary and Secondary":0.996,
+    "Secondary":0.991,
+    "Tertiary":1.272,
+    "ISO":"DNK"
+  },
+  {
+    "Country":"Ecuador",
+    "Year":2019,
+    "Primary":1.021,
+    "Primary and Secondary":1.024,
+    "Secondary":1.027,
+    "Tertiary":1.14,
+    "ISO":"ECU"
+  },
+  {
+    "Country":"Estonia",
+    "Year":2019,
+    "Primary":1.008,
+    "Primary and Secondary":1.022,
+    "Secondary":1.036,
+    "Tertiary":1.327,
+    "ISO":"EST"
+  },
+  {
+    "Country":"Finland",
+    "Year":2019,
+    "Primary":0.995,
+    "Primary and Secondary":1.052,
+    "Secondary":1.096,
+    "Tertiary":1.172,
+    "ISO":"FIN"
+  },
+  {
+    "Country":"France",
+    "Year":2019,
+    "Primary":0.995,
+    "Primary and Secondary":0.999,
+    "Secondary":1.001,
+    "Tertiary":1.204,
+    "ISO":"FRA"
+  },
+  {
+    "Country":"Gabon",
+    "Year":2019,
+    "Primary":0.967,
+    "Primary and Secondary":1.016,
+    "Secondary":1.079,
+    "Tertiary":1.201,
+    "ISO":"GAB"
+  },
+  {
+    "Country":"Georgia",
+    "Year":2019,
+    "Primary":1.008,
+    "Primary and Secondary":1.008,
+    "Secondary":1.008,
+    "Tertiary":1.088,
+    "ISO":"GEO"
+  },
+  {
+    "Country":"Germany",
+    "Year":2019,
+    "Primary":1.008,
+    "Primary and Secondary":0.965,
+    "Secondary":0.947,
+    "Tertiary":1.038,
+    "ISO":"DEU"
+  },
+  {
+    "Country":"Ghana",
+    "Year":2019,
+    "Primary":1.014,
+    "Primary and Secondary":1.008,
+    "Secondary":0.999,
+    "Tertiary":0.825,
+    "ISO":"GHA"
+  },
+  {
+    "Country":"Greece",
+    "Year":2019,
+    "Primary":1.005,
+    "Primary and Secondary":0.976,
+    "Secondary":0.949,
+    "Tertiary":1.051,
+    "ISO":"GRC"
+  },
+  {
+    "Country":"Guinea",
+    "Year":2019,
+    "Primary":0.839,
+    "Primary and Secondary":0.805,
+    "Secondary":0.718,
+    "Tertiary":0.404,
+    "ISO":"GIN"
+  },
+  {
+    "Country":"Hungary",
+    "Year":2019,
+    "Primary":0.987,
+    "Primary and Secondary":0.993,
+    "Secondary":0.997,
+    "Tertiary":1.197,
+    "ISO":"HUN"
+  },
+  {
+    "Country":"Iceland",
+    "Year":2019,
+    "Primary":1.004,
+    "Primary and Secondary":0.988,
+    "Secondary":0.971,
+    "Tertiary":1.495,
+    "ISO":"ISL"
+  },
+  {
+    "Country":"India",
+    "Year":2019,
+    "Primary":1.019,
+    "Primary and Secondary":1.02,
+    "Secondary":1.019,
+    "Tertiary":1.079,
+    "ISO":"IND"
+  },
+  {
+    "Country":"Ireland",
+    "Year":2019,
+    "Primary":0.999,
+    "Primary and Secondary":1.04,
+    "Secondary":1.095,
+    "Tertiary":1.134,
+    "ISO":"IRL"
+  },
+  {
+    "Country":"Israel",
+    "Year":2019,
+    "Primary":1.012,
+    "Primary and Secondary":1.014,
+    "Secondary":1.017,
+    "Tertiary":1.322,
+    "ISO":"ISR"
+  },
+  {
+    "Country":"Italy",
+    "Year":2019,
+    "Primary":0.981,
+    "Primary and Secondary":0.983,
+    "Secondary":0.985,
+    "Tertiary":1.275,
+    "ISO":"ITA"
+  },
+  {
+    "Country":"Jordan",
+    "Year":2019,
+    "Primary":0.983,
+    "Primary and Secondary":1.0,
+    "Secondary":1.025,
+    "Tertiary":1.266,
+    "ISO":"JOR"
+  },
+  {
+    "Country":"Kazakhstan",
+    "Year":2019,
+    "Primary":1.018,
+    "Primary and Secondary":1.013,
+    "Secondary":1.01,
+    "Tertiary":1.177,
+    "ISO":"KAZ"
+  },
+  {
+    "Country":"Kyrgyz Republic",
+    "Year":2019,
+    "Primary":0.988,
+    "Primary and Secondary":0.994,
+    "Secondary":0.998,
+    "Tertiary":1.198,
+    "ISO":"KGZ"
+  },
+  {
+    "Country":"Lao PDR",
+    "Year":2019,
+    "Primary":0.966,
+    "Primary and Secondary":0.951,
+    "Secondary":0.936,
+    "Tertiary":1.131,
+    "ISO":"LAO"
+  },
+  {
+    "Country":"Latvia",
+    "Year":2019,
+    "Primary":1.0,
+    "Primary and Secondary":1.0,
+    "Secondary":0.999,
+    "Tertiary":1.28,
+    "ISO":"LVA"
+  },
+  {
+    "Country":"Lithuania",
+    "Year":2019,
+    "Primary":0.996,
+    "Primary and Secondary":0.977,
+    "Secondary":0.967,
+    "Tertiary":1.264,
+    "ISO":"LTU"
+  },
+  {
+    "Country":"Malaysia",
+    "Year":2019,
+    "Primary":1.009,
+    "Primary and Secondary":1.04,
+    "Secondary":1.078,
+    "Tertiary":1.223,
+    "ISO":"MYS"
+  },
+  {
+    "Country":"Malta",
+    "Year":2019,
+    "Primary":1.008,
+    "Primary and Secondary":1.005,
+    "Secondary":1.002,
+    "Tertiary":1.315,
+    "ISO":"MLT"
+  },
+  {
+    "Country":"Mauritius",
+    "Year":2019,
+    "Primary":1.026,
+    "Primary and Secondary":1.025,
+    "Secondary":1.024,
+    "Tertiary":1.281,
+    "ISO":"MUS"
+  },
+  {
+    "Country":"Mexico",
+    "Year":2019,
+    "Primary":1.009,
+    "Primary and Secondary":1.052,
+    "Secondary":1.096,
+    "Tertiary":1.058,
+    "ISO":"MEX"
+  },
+  {
+    "Country":"Moldova",
+    "Year":2019,
+    "Primary":0.953,
+    "Primary and Secondary":0.973,
+    "Secondary":0.985,
+    "Tertiary":1.243,
+    "ISO":"MDA"
+  },
+  {
+    "Country":"Mongolia",
+    "Year":2019,
+    "Primary":0.979,
+    "Primary and Secondary":0.993,
+    "Secondary":1.008,
+    "Tertiary":1.335,
+    "ISO":"MNG"
+  },
+  {
+    "Country":"Montenegro",
+    "Year":2019,
+    "Primary":1.0,
+    "Primary and Secondary":1.011,
+    "Secondary":1.019,
+    "Tertiary":1.241,
+    "ISO":"MNE"
+  },
+  {
+    "Country":"Morocco",
+    "Year":2019,
+    "Primary":0.966,
+    "Primary and Secondary":0.951,
+    "Secondary":0.93,
+    "Tertiary":1.012,
+    "ISO":"MAR"
+  },
+  {
+    "Country":"Nepal",
+    "Year":2019,
+    "Primary":1.019,
+    "Primary and Secondary":1.046,
+    "Secondary":1.073,
+    "Tertiary":1.063,
+    "ISO":"NPL"
+  },
+  {
+    "Country":"New Zealand",
+    "Year":2019,
+    "Primary":1.002,
+    "Primary and Secondary":1.033,
+    "Secondary":1.055,
+    "Tertiary":1.353,
+    "ISO":"NZL"
+  },
+  {
+    "Country":"North Macedonia",
+    "Year":2019,
+    "Primary":1.008,
+    "Primary and Secondary":0.991,
+    "Secondary":0.979,
+    "Tertiary":1.28,
+    "ISO":"MKD"
+  },
+  {
+    "Country":"Norway",
+    "Year":2019,
+    "Primary":1.0,
+    "Primary and Secondary":0.976,
+    "Secondary":0.951,
+    "Tertiary":1.328,
+    "ISO":"NOR"
+  },
+  {
+    "Country":"Pakistan",
+    "Year":2019,
+    "Primary":0.881,
+    "Primary and Secondary":0.877,
+    "Secondary":0.868,
+    "Tertiary":0.958,
+    "ISO":"PAK"
+  },
+  {
+    "Country":"Philippines",
+    "Year":2019,
+    "Primary":0.97,
+    "Primary and Secondary":1.025,
+    "Secondary":1.085,
+    "Tertiary":1.231,
+    "ISO":"PHL"
+  },
+  {
+    "Country":"Poland",
+    "Year":2019,
+    "Primary":0.987,
+    "Primary and Secondary":0.979,
+    "Secondary":0.971,
+    "Tertiary":1.349,
+    "ISO":"POL"
+  },
+  {
+    "Country":"Portugal",
+    "Year":2019,
+    "Primary":0.979,
+    "Primary and Secondary":0.993,
+    "Secondary":1.005,
+    "Tertiary":1.167,
+    "ISO":"PRT"
+  },
+  {
+    "Country":"Romania",
+    "Year":2019,
+    "Primary":0.99,
+    "Primary and Secondary":0.998,
+    "Secondary":1.003,
+    "Tertiary":1.205,
+    "ISO":"ROU"
+  },
+  {
+    "Country":"Russian Federation",
+    "Year":2019,
+    "Primary":0.99,
+    "Primary and Secondary":0.98,
+    "Secondary":0.973,
+    "Tertiary":1.153,
+    "ISO":"RUS"
+  },
+  {
+    "Country":"Saudi Arabia",
+    "Year":2019,
+    "Primary":1.015,
+    "Primary and Secondary":0.96,
+    "Secondary":0.905,
+    "Tertiary":1.114,
+    "ISO":"SAU"
+  },
+  {
+    "Country":"Senegal",
+    "Year":2019,
+    "Primary":1.142,
+    "Primary and Secondary":1.137,
+    "Secondary":1.132,
+    "Tertiary":0.756,
+    "ISO":"SEN"
+  },
+  {
+    "Country":"Serbia",
+    "Year":2019,
+    "Primary":0.999,
+    "Primary and Secondary":1.007,
+    "Secondary":1.011,
+    "Tertiary":1.28,
+    "ISO":"SRB"
+  },
+  {
+    "Country":"Slovak Republic",
+    "Year":2019,
+    "Primary":0.995,
+    "Primary and Secondary":1.007,
+    "Secondary":1.013,
+    "Tertiary":1.337,
+    "ISO":"SVK"
+  },
+  {
+    "Country":"Slovenia",
+    "Year":2019,
+    "Primary":0.998,
+    "Primary and Secondary":1.009,
+    "Secondary":1.019,
+    "Tertiary":1.337,
+    "ISO":"SVN"
+  },
+  {
+    "Country":"South Africa",
+    "Year":2019,
+    "Primary":0.965,
+    "Primary and Secondary":1.003,
+    "Secondary":1.062,
+    "Tertiary":1.336,
+    "ISO":"ZAF"
+  },
+  {
+    "Country":"Spain",
+    "Year":2019,
+    "Primary":1.013,
+    "Primary and Secondary":1.022,
+    "Secondary":1.029,
+    "Tertiary":1.184,
+    "ISO":"ESP"
+  },
+  {
+    "Country":"Sweden",
+    "Year":2019,
+    "Primary":1.04,
+    "Primary and Secondary":1.054,
+    "Secondary":1.068,
+    "Tertiary":1.403,
+    "ISO":"SWE"
+  },
+  {
+    "Country":"Switzerland",
+    "Year":2019,
+    "Primary":0.995,
+    "Primary and Secondary":0.969,
+    "Secondary":0.946,
+    "Tertiary":1.066,
+    "ISO":"CHE"
+  },
+  {
+    "Country":"Tanzania",
+    "Year":2019,
+    "Primary":1.023,
+    "Primary and Secondary":1.032,
+    "Secondary":1.08,
+    "Tertiary":0.632,
+    "ISO":"TZA"
+  },
+  {
+    "Country":"Thailand",
+    "Year":2019,
+    "Primary":0.994,
+    "Primary and Secondary":0.996,
+    "Secondary":0.997,
+    "Tertiary":1.272,
+    "ISO":"THA"
+  },
+  {
+    "Country":"United Kingdom",
+    "Year":2019,
+    "Primary":0.998,
+    "Primary and Secondary":1.011,
+    "Secondary":1.022,
+    "Tertiary":1.263,
+    "ISO":"GBR"
+  },
+  {
+    "Country":"United States",
+    "Year":2019,
+    "Primary":1.007,
+    "Primary and Secondary":0.995,
+    "Secondary":0.983,
+    "Tertiary":1.278,
+    "ISO":"USA"
+  },
+  {
+    "Country":"Uzbekistan",
+    "Year":2019,
+    "Primary":0.988,
+    "Primary and Secondary":0.992,
+    "Secondary":0.995,
+    "Tertiary":0.736,
+    "ISO":"UZB"
+  }
+]

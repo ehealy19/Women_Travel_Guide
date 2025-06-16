@@ -1,0 +1,72 @@
+ISO,Country,Year,political_empow_index,Continent
+ALB,Albania,2019,0.897,Europe
+ARG,Argentina,2019,0.855,South America
+AUS,Australia,2019,0.92,Oceania
+AUT,Austria,2019,0.935,Europe
+BEL,Belgium,2019,0.95,Europe
+BFA,Burkina Faso,2019,0.679,Africa
+BGR,Bulgaria,2019,0.911,Europe
+BHR,Bahrain,2019,0.518,Asia
+CAN,Canada,2019,0.912,North America
+CHE,Switzerland,2019,0.941,Europe
+CHL,Chile,2019,0.858,South America
+CIV,Cote d'Ivoire,2019,0.664,Africa
+COL,Colombia,2019,0.762,South America
+CRI,Costa Rica,2019,0.913,North America
+CYP,Cyprus,2019,0.872,Asia
+CZE,Czechia,2019,0.896,Europe
+DEU,Germany,2019,0.959,Europe
+DNK,Denmark,2019,0.955,Europe
+ECU,Ecuador,2019,0.848,South America
+ESP,Spain,2019,0.946,Europe
+EST,Estonia,2019,0.949,Europe
+FIN,Finland,2019,0.948,Europe
+FRA,France,2019,0.944,Europe
+GAB,Gabon,2019,0.762,Africa
+GBR,United Kingdom,2019,0.89,Europe
+GEO,Georgia,2019,0.89,Asia
+GHA,Ghana,2019,0.805,Africa
+GIN,Guinea,2019,0.488,Africa
+GRC,Greece,2019,0.913,Europe
+HRV,Croatia,2019,0.891,Europe
+HUN,Hungary,2019,0.841,Europe
+IND,India,2019,0.636,Asia
+IRL,Ireland,2019,0.924,Europe
+ISL,Iceland,2019,0.923,Europe
+ISR,Israel,2019,0.876,Asia
+ITA,Italy,2019,0.935,Europe
+JOR,Jordan,2019,0.669,Asia
+KAZ,Kazakhstan,2019,0.805,Asia
+KGZ,Kyrgyzstan,2019,0.779,Asia
+LAO,Laos,2019,0.494,Asia
+LTU,Lithuania,2019,0.92,Europe
+LVA,Latvia,2019,0.953,Europe
+MAR,Morocco,2019,0.721,Africa
+MDA,Moldova,2019,0.878,Europe
+MEX,Mexico,2019,0.811,North America
+MKD,North Macedonia,2019,0.85,Europe
+MLT,Malta,2019,0.842,Europe
+MNE,Montenegro,2019,0.864,Europe
+MNG,Mongolia,2019,0.867,Asia
+MUS,Mauritius,2019,0.854,Africa
+MYS,Malaysia,2019,0.764,Asia
+NOR,Norway,2019,0.911,Europe
+NPL,Nepal,2019,0.76,Asia
+NZL,New Zealand,2019,0.943,Oceania
+PAK,Pakistan,2019,0.601,Asia
+PHL,Philippines,2019,0.797,Asia
+POL,Poland,2019,0.864,Europe
+PRT,Portugal,2019,0.931,Europe
+ROU,Romania,2019,0.883,Europe
+RUS,Russia,2019,0.684,Europe
+SAU,Saudi Arabia,2019,0.281,Asia
+SEN,Senegal,2019,0.837,Africa
+SRB,Serbia,2019,0.887,Europe
+SVK,Slovakia,2019,0.891,Europe
+SVN,Slovenia,2019,0.94,Europe
+SWE,Sweden,2019,0.931,Europe
+THA,Thailand,2019,0.68,Asia
+TZA,Tanzania,2019,0.789,Africa
+USA,United States,2019,0.889,North America
+UZB,Uzbekistan,2019,0.643,Asia
+ZAF,South Africa,2019,0.859,Africa

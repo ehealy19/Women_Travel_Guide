@@ -1,0 +1,72 @@
+Rank,Country,ISO,Global_Health_Index_Score 
+2,Austria,AUT,67
+3,Finland,FIN,65
+4,Latvia,LVA,65
+5,Norway,NOR,65
+6,Germany,DEU,65
+8,Denmark,DNK,64
+9,Australia,AUS,64
+10,Switzerland,CHE,64
+11,Estonia,EST,64
+12,United Kingdom,GBR,63
+13,Iceland,ISL,63
+14,New Zealand,NZL,62
+15,Sweden,SWE,62
+16,Portugal,PRT,62
+17,Mauritius,MUS,62
+18,Israel,ISR,62
+19,Czech Republic,CZE,62
+20,Ireland,IRL,62
+22,Saudi Arabia,SAU,61
+23,France,FRA,61
+25,Belgium,BEL,61
+26,United States,USA,61
+28,Hungary,HUN,60
+30,Slovenia,SVN,60
+31,Malta,MLT,60
+34,Slovakia,SVK,59
+35,Croatia,HRV,58
+36,Italy,ITA,58
+37,Kazakhstan,KAZ,58
+38,Spain,ESP,58
+40,Lithuania,LTU,57
+41,Serbia,SRB,57
+43,Canada,CAN,57
+44,Romania,ROU,57
+45,Bulgaria,BGR,57
+46,Thailand,THA,56
+47,Malaysia,MYS,56
+48,Cyprus,CYP,56
+49,Mongolia,MNG,55
+50,South Africa,ZAF,55
+52,Poland,POL,55
+53,India,IND,55
+55,Moldova,MDA,54
+56,Tanzania,TZA,53
+57,Greece,GRC,53
+58,Russia,RUS,53
+59,Chile,CHL,52
+60,Montenegro,MNE,52
+64,Uzbekistan,UZB,51
+65,Argentina,ARG,51
+67,Kyrgyzstan,KGZ,51
+71,Costa Rica,CRI,50
+73,Laos,LAO,49
+75,North Macedonia,MKD,49
+76,Ghana,GHA,49
+82,Albania,ALB,48
+83,Morocco,MAR,48
+84,Nepal,NPL,48
+86,Philippines,PHL,47
+87,Mexico,MEX,47
+88,Georgia,GEO,46
+90,Pakistan,PAK,46
+92,Senegal,SEN,45
+94,Ivory Coast,CIV,45
+95,Colombia,COL,44
+100,Burkina Faso,BFA,43
+104,Guinea,GIN,42
+109,Ecuador,ECU,40
+111,Gabon,GAB,38
+115,Jordan,JOR,0
+116,Bahrain,BHR,0

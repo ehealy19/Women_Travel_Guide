@@ -1,0 +1,1410 @@
+---
+bibliography: reference.bib
+format:
+  closeread-html:
+    toc: false
+    code-fold: false
+    code-copy: false
+    code-overflow: wrap
+    mainfont: Atkinson Hyperlegible
+    code-annotations: hover
+    embed-resources: true
+    light:
+      - cosmo
+      - style/html-sta313.scss
+    dark:
+      - cosmo
+      - style/html-sta313.scss
+      - style/html-dark.scss
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
+---
+
+<style>
+  body {
+    background-color: #d1c2ea;
+    color: black;
+    font-family: 'Georgia', serif;
+  }
+</style>
+
+
+:::{#cr-travel-image}
+![](../img/5200_title_image.png){max-width=100;max-height=100}
+:::
+
+<div style="background-color: #ffffff; width: 100vw; margin-left: calc(-50vw + 50%); padding: 2rem 5%;">
+
+## ECONOMIC EMPOWERMENT
+
+<br>
+
+"Women’s economic empowerment is essential to achieving women’s rights and gender equality. Women’s economic empowerment means ensuring women can equally participate in and benefit from decent work and social protection; access markets and have control over resources, their own time, lives, and bodies; and increased voice, agency, and meaningful participation in economic decision-making at all levels from the household to international institutions."
+-UN Women (unwomen.org)
+
+<br>
+
+</div>
+
+:::::::::::::: cr-section
+@cr-economic1
+
+::: {}
+To evaluate each country's economic empowerment for women, we examined four key metrics: the female labor force participation rate [@forcedLabor], 
+the number of weeks of paid maternity leave [@maternityLeave], the ratio of women to men who enroll in post-secondary education [@schoolEnrollmentParity], 
+and the expected years of schooling for women [@schoolExpectedYears]. These metrics provide a comprehensive view of the opportunities 
+and support available to women in the workforce and education systems globally.
+:::
+
+@cr-economic1
+
+::: {}
+This interactive radar chart allows you to compare five countries across these four metrics related to women’s economic empowerment.
+The dropdown menu lets you select different rankings, showing either the top 5 or bottom 5 countries based on any of the metrics.
+You may notice that a country scoring low on one metric does not necessarily score low on all of them.
+In general, the closer the shape is to a full rhombus, the stronger the country's overall performance across all categories.
+:::
+
+::: {#cr-economic1}
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+
+economic_empowerment_combined = pd.read_csv("../data/analysis_data/csv_files/economic_empowerment_combined.csv") 
+
+# normalize the data for radar chart (0–100 scale)
+norm_df = economic_empowerment_combined.copy()
+norm_df["Paid Maternity Leave (Weeks)"] = norm_df["Paid Maternity Leave (Weeks)"] / norm_df["Paid Maternity Leave (Weeks)"].max() * 100
+norm_df["Female Labor Rate"] = norm_df["Female Labor Rate"] / norm_df["Female Labor Rate"].max() * 100
+norm_df["Expected Years in School"] = norm_df["Expected Years in School"] / norm_df["Expected Years in School"].max() * 100
+norm_df["Tertiary Enrollment Gender Parity"] = norm_df["Tertiary Enrollment Gender Parity"] / norm_df["Tertiary Enrollment Gender Parity"].max() * 100
+
+categories = ["Paid Maternity Leave (Weeks)", "Female Labor Rate", "Expected Years in School", "Tertiary Enrollment Gender Parity"]
+
+# colors for radar graph
+colors = [
+    ('rgba(255, 0, 0, 0.2)', 'rgba(255, 0, 0, 0.8)'),       # red
+    ('rgba(0, 255, 0, 0.2)', 'rgba(0, 255, 0, 0.8)'),       # green
+    ('rgba(0, 255, 255, 0.2)', 'rgba(0, 255, 255, 0.8)'),   # cyan
+    ('rgba(255, 255, 0, 0.2)', 'rgba(255, 255, 0, 0.8)'),   # yellow
+    ('rgba(128, 0, 128, 0.2)', 'rgba(128, 0, 128, 0.8)'),   # purple
+]
+
+# Store all trace groups for dropdown control
+all_traces = []
+buttons = []
+trace_labels = []
+
+# Collect visibility settings
+visibility_matrix = []
+
+for metric in categories:
+    for group in ["Top 5", "Bottom 5"]:
+        # Determine sort direction
+        if metric == "Paid Maternity Leave (Weeks)":
+            ascending = False if group == "Top 5" else True
+        else:
+            ascending = True if group == "Bottom 5" else False
+
+        # Select 5 countries
+        subset = norm_df.sort_values(by=metric, ascending=ascending).head(5)
+
+        group_traces = []
+
+        color_idx = 0  # index for color palette
+
+        for _, row in subset.iterrows():
+            values = [row[cat] for cat in categories]
+            values += values[:1]  # loop back to first
+
+            fill_rgba, line_rgba = colors[color_idx % len(colors)]
+            color_idx += 1
+
+            trace = go.Scatterpolar(
+                r=values,
+                theta=categories + [categories[0]],
+                fill='toself',
+                fillcolor=fill_rgba,
+                line=dict(color=line_rgba),
+                name=row["Country"],
+                visible=False
+            )
+            group_traces.append(trace)
+            trace_labels.append(f"{group} by {metric}")
+
+
+        all_traces.extend(group_traces)
+
+# Add all traces at once (Plotly needs them up front)
+fig = go.Figure(data=all_traces)
+
+# Build visibility settings
+total_traces = len(all_traces)
+traces_per_button = 5
+num_buttons = total_traces // traces_per_button
+
+for i in range(num_buttons):
+    visibility = [False] * total_traces
+    for j in range(i * traces_per_button, (i + 1) * traces_per_button):
+        visibility[j] = True
+
+    metric_group_label = trace_labels[i * traces_per_button]
+    buttons.append(dict(
+        label=metric_group_label,
+        method="update",
+        args=[
+            {"visible": visibility},
+            {"title": metric_group_label}
+        ]
+    ))
+
+# Default: show first 5
+initial_visibility = [i < 5 for i in range(total_traces)]
+fig.update_traces(visible=False)
+for i in range(5):
+    fig.data[i].visible = True
+
+fig.update_layout(
+    title=dict(
+        text="Economic Empowerment Metrics",
+        font=dict(size=22) 
+    ),
+    polar=dict(
+        radialaxis=dict(visible=True, range=[0, 100]),
+        angularaxis=dict(
+            tickfont=dict(size=16)
+        )
+    ),
+    showlegend=True,
+    legend=dict(
+        font=dict(size=16)  
+    ),
+    width=1000,
+    height=600,
+    margin=dict(l=40, r=120, t=40, b=40),
+    font=dict(  
+        family="Georgia",
+        size=16
+    ),
+    updatemenus=[dict(
+        type="dropdown",
+        direction="down",
+        buttons=buttons,
+        x=0.9,
+        y=1.15,
+        showactive=True
+    )],
+    annotations=[
+        dict(
+            text="Figure 1.",
+            x=1,
+            y=-0.04,
+            showarrow=False,
+            font=dict(size=11),
+            xref="paper",
+            yref="paper",
+            xanchor="center",
+            yanchor="top"
+        )
+    ]
+)
+
+fig.show()
+
+```
+
+:::
+::::::::::::::
+
+<div style="background-color: #ffffff; width: 100vw; margin-left: calc(-50vw + 50%); padding: 2rem 5%;">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## POLITICAL EMPOWERMENT
+
+<br>
+Political empowerment is about more than just the right to vote. It’s about the ability to shape society through participation, leadership, and influence.
+
+Globally, political power remains extremely unequal. Women, marginalized communities, and minority groups are shut out of conversations that affect their lives, while the same powerful voices dominate.
+
+In this section, we examine the Political Empowerment Index dataset created by the Varieties of Democracy (V-Dem) project [@polEmp], an ongoing global effort to quantitatively measure democracy and human rights. The index assigns each country a composite score between 0 and 1, equally weighing three factors: women’s representation in formal politics, fundamental civil liberties, and the ability to exist freely within civil society.
+
+By comparing these scores across continents, we can see where true political inclusion is a reality and where there is work to be done.
+
+<br>
+
+</div>
+:::::::::::::: cr-section
+
+@cr-empower1
+
+::: {}
+Political empowerment reflects the representation of women in decision-making roles ranging from parliament to ministerial positions. But how equally is that power shared across the globe?
+:::
+
+::: {#cr-empower1}
+```{ojs}
+finalCountries = FileAttachment("../data/clean_data/pol_empower_update.csv").csv()
+
+
+html`<h1 style="font-family: Georgia, serif; font-size: 20px; text-align: center;">Political Empowerment by Continent</h1>`
+
+
+Plot.plot({
+ style: {
+   backgroundColor: "white",
+   fontFamily: "Georgia, serif", 
+   fontSize: "14px" 
+ },
+ y: {
+   label: "Political Empowerment Index",
+   grid: true,
+   domain: [0, 1]
+ },
+ x: {
+   label: "Continent"
+ },
+ color: {
+   domain: ["Europe", "Oceania", "Africa", "Asia", "North America", "South America"],
+   range: ["#21DDDE", "#8021DE", "#DE2221", "#7FDE21", "#f2d90d", "#F20D99"],
+   legend: false
+ },
+ marks: [
+   Plot.boxY(finalCountries, {
+     x: "Continent",
+     y: "political_empow_index",
+     fill: "Continent",
+     stroke: "black",
+     sort: "x"
+   })
+ ],
+ width: 800,
+ height: 520,
+ marginBottom: 60
+})
+
+html`<p style="font-family: Georgia, serif; font-size: 11px; text-align: right; width: 800px; margin: 4px auto 0 auto; padding-right: 10px;">Figure 2.</p>`
+
+```
+:::
+
+::: {}
+The first view shows the full distribution of Political Empowerment Index scores across all continents.
+
+<br>
+Immediately, it's clear that there is no continent where political empowerment is universally high. Every region contains countries clustered at the lower end of the scale, with only a handful nearing full inclusion.
+
+<br>
+Higher scores reflect greater inclusion in politics, stronger civil liberties, and freer participation in civil society, all of which are necessary elements that ensure women have a voice in shaping policies that affect their lives.
+
+:::
+
+@cr-empower2
+
+::: {}
+When we isolate Europe and Oceania, we see that these regions consistently perform better on the Political Empowerment Index.
+
+<br>
+In Europe, decades of activism, legal reform, and regional cooperation have steadily expanded political rights and freedoms. Similarly, Oceania led by countries like New Zealand and Australia has made significant strides in guaranteeing women's political participation and safeguarding civil liberties.
+
+<br>
+However, even among these higher-scoring continents, the spread is not uniform. Some nations still lag behind, showing that ensuring empowerment is an ongoing project.
+
+:::
+
+::: {#cr-empower2}
+```{ojs}
+
+html`<h1 style="font-family: Georgia, serif; font-size: 20px; text-align: center;">Political Empowerment by Continent</h1>`
+
+
+Plot.plot({
+ style: {
+   backgroundColor: "white",
+   fontFamily: "Georgia, serif",
+   fontSize: "14px" 
+ },
+ y: {
+   label: "Political Empowerment Index",
+   grid: true,
+   domain: [0, 1]
+ },
+ x: {
+   label: "Continent"
+ },
+ color: {
+   domain: ["Europe", "Oceania", "Africa", "Asia", "North America", "South America"],
+   range: ["#21DDDE", "#8021DE", "#cccccc", "#cccccc", "#cccccc", "#cccccc"],
+   legend: false
+ },
+ marks: [
+   Plot.boxY(finalCountries, {
+     x: "Continent",
+     y: "political_empow_index",
+     fill: "Continent",
+     stroke: "black",
+     sort: "x"
+   })
+ ],
+ width: 800,
+ height: 520,
+ marginBottom: 60
+})
+
+html`<p style="font-family: Georgia, serif; font-size: 11px; text-align: right; width: 800px; margin: 4px auto 0 auto; padding-right: 10px;">Figure 2.</p>`
+
+
+```
+:::
+
+@cr-empower3
+
+::: {}
+As we shift our focus to Asia and Africa, we see some of the lowest Political Empowerment Index scores. The story is more complex than this, however, and requires an understanding of their histories.
+
+<br>
+Centuries of colonialism disrupted the existing government structures in these countries, such as by suppressing indigenous leadership (often including women leaders). Imperialists established political systems that were designed to serve their own interests rather than local communities. These legacies of exclusion and instability still shape political life today, influencing who has access to power and who does not [@polEmpCol].
+
+:::
+
+@cr-empower3
+
+::: {}
+<br>
+At the same time, modern challenges also play a significant role. In many countries, women remain underrepresented in political institutions, and freedoms necessary for political participation are under threat. Structural inequality, conflict, and restrictive governments continue to limit political empowerment.
+
+<br>
+Despite this, movements for democracy, civil rights, and gender equality are pushing forward, expanding space for women's voices. Several countries lie in the upper ranges of scores for political empowerment, and hopefully more are making progress in that direction.
+
+:::
+
+::: {#cr-empower3}
+```{ojs}
+html`<h1 style="font-family: Georgia, serif; font-size: 20px; text-align: center;">Political Empowerment by Continent</h1>`
+
+
+Plot.plot({
+ style: {
+   backgroundColor: "white",
+   fontFamily: "Georgia, serif", 
+   fontSize: "14px" 
+ },
+ y: {
+   label: "Political Empowerment Index",
+   grid: true,
+   domain: [0, 1]
+ },
+ color: {
+   domain: ["Europe", "Oceania", "Africa", "Asia", "North America", "South America"],
+   range: ["#cccccc", "#cccccc", "#DE2221", "#7FDE21", "#cccccc", "#cccccc"],
+   legend: false
+ },
+ marks: [
+   Plot.boxY(finalCountries, {
+     x: "Continent",
+     y: "political_empow_index",
+     fill: "Continent",
+     stroke: "black",
+     sort: "x"
+   })
+ ],
+ width: 800,
+ height: 520,
+ marginBottom: 60
+})
+
+html`<p style="font-family: Georgia, serif; font-size: 11px; text-align: right; width: 800px; margin: 4px auto 0 auto; padding-right: 10px;">Figure 2.</p>`
+
+```
+:::
+
+::: {}
+Ultimately, true political empowerment is about who gets to decide the future.
+
+This data shows that, while some parts of the world have made significant strides, many others have left large portions of their populations behind. Recognizing these patterns is the first step toward building more equitable and representative political systems for generations to come.
+:::
+
+::::::::::::::
+
+
+<div style="background-color: #ffffff; width: 100vw; margin-left: calc(-50vw + 50%); padding: 2rem 5%;">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## HEALTH
+
+<br>
+
+Women’s health is vital to empowerment and a key measure of how well a country’s healthcare system serves its people. The bubble graph below provides a snapshot of women’s health across different nations by comparing three critical indicators: Global Health Index score [@globalHealthIndex], life expectancy [@lifeExpectancy], and maternal mortality rates [@maternalMortality]. By visualizing these factors together, women can better understand how healthcare systems perform—and how those outcomes might affect their lives.
+
+<br>
+
+</div>
+
+
+:::::::::::::: cr-section
+@cr-pitch7
+
+::: {}
+A clear trend emerges: countries with higher Global Health Index scores tend to have longer Life Expectancies and fewer Maternal Deaths—represented by smaller bubbles clustered toward the top right. These nations are mostly in Europe, with countries such as France and Switzerland exhibiting greater health statistics. On the flip side, nations with lower scores often face shorter Lifespans and higher Maternal Mortality, shown by larger bubbles toward the bottom left. These countries include Guinea, Zimbabwe and Pakistan. This stark contrast highlights global healthcare disparities, helping women make informed choices about where they might thrive—not just economically, but in terms of well-being, too.
+:::
+
+::: {#cr-pitch7}
+```{python}
+# Life Expectancy Data 
+# Global Heallth
+# Maternal Mortality 
+# All of these will result in one graph that represents overall women's health in the different countries 
+
+import pandas as pd
+import numpy as np
+import plotly.graph_objects as go
+import plotly.express as px
+
+
+
+
+# Loading & cleaning the data
+global_health = pd.read_csv("../data/clean_data/global_health_index.csv")
+maternal_mortality = pd.read_csv("../data/clean_data/maternal_mortality_csv.csv")
+life_expectancy = pd.read_csv("../data/clean_data/life_expectancy.csv")
+
+global_health_clean = global_health[global_health['Index_Score '] != 0]
+maternal_mortality_clean = maternal_mortality[maternal_mortality['MMR'] != 0]
+
+
+# Merging global health data & MMR
+health_data = pd.merge(global_health_clean, maternal_mortality_clean, on="Country", how="inner", suffixes=('', '_mm'))
+
+# Cleaning and merging with life expectancy -> Looking at life expectancy @ birth. 
+life_expectancy = life_expectancy.rename(columns={"Life expectancy at birth (years)": "Life_Expectancy"})
+life_expectancy_clean = life_expectancy.dropna(subset=["Life_Expectancy"])
+life_expectancy_clean = life_expectancy_clean[life_expectancy_clean["Life_Expectancy"] > 0]
+
+
+health_bubble = pd.merge(health_data, life_expectancy_clean, on="Country", how="inner")
+
+
+
+life_expectancy = pd.read_csv("../data/clean_data/life_expectancy.csv")
+# Renaming -> Life_Expectancy  
+life_expectancy = life_expectancy.rename(columns={"Life expectancy at birth (years)": "Life_Expectancy"})
+# Filtering out  the NAs 
+life_expectancy = life_expectancy.dropna(subset=["Life_Expectancy"])
+life_expectancy = life_expectancy[life_expectancy["Life_Expectancy"] > 0]
+
+health_bubble = pd.merge(health_data, life_expectancy, on="Country", how="inner")
+
+
+
+# Getting the max MMR to scale sizes of the bubbles. & Using log10 
+max_mmr = health_bubble["MMR"].max()
+
+health_bubble["Bubble_Size"] = (np.log10(health_bubble["MMR"] + 1) / np.log10(max_mmr + 1)) * 60
+
+
+#print(health_bubble.columns.tolist())
+
+
+# Creating the hover text on the countries. 
+
+health_bubble["hover_text"] = (
+    "<b>Country:</b> " + health_bubble["Country"].astype(str) + "<br>" +
+    "<b>ISO Code:</b> " + health_bubble["ISO_x"].astype(str) + "<br>" +
+    "<b>Global Health Index:</b> " + health_bubble["Index_Score "].round(2).astype(str) + "<br>" +
+    "<b>Life Expectancy:</b> " + health_bubble["Life_Expectancy"].round(1).astype(str) + " years<br>" +
+    "<b>Maternal Mortality Rate:</b> " + health_bubble["MMR"].astype(str)
+)
+
+
+
+# Choosing a set of standout countries to label trying to see if it can plot all of the different ones. 
+label_countries = pd.concat([
+    health_bubble.sort_values(by="Life_Expectancy", ascending=False).tail(5),
+    health_bubble.sort_values(by="Life_Expectancy", ascending=False).head(5),
+    health_bubble.sort_values(by="Index_Score ").head(15),
+    health_bubble.sort_values(by="MMR", ascending=False).head(15)
+])["Country"].unique()
+
+
+#### OG Graph replaced with color coded continents
+# Creating a label col that will show selected countries because earlier it was too congested. 
+
+
+health_bubble["Label"] = health_bubble.apply(
+    lambda row: row["ISO_x"] if row["Country"] in label_countries else "",
+    axis=1
+)
+
+
+### Adding graph with multicontinent colors 
+
+
+import pycountry_convert as pc #Library that imports continents and it will use both country name and country code. 
+
+# Adding continent info from pycountry
+def country_to_continent(country_name):
+    try:
+        alpha2 = pc.country_name_to_country_alpha2(country_name)
+        continent_code = pc.country_alpha2_to_continent_code(alpha2)
+        return pc.convert_continent_code_to_continent_name(continent_code)
+    except:
+        return "Other"
+
+health_bubble["Continent"] = health_bubble["Country"].apply(country_to_continent)
+
+# Creating the multicontinent color codes bubble plot
+color_palette = px.colors.qualitative.Set2
+# continent_colors = {cont: color_palette[i % len(color_palette)] for i, cont in enumerate(health_bubble["Continent"].unique())}
+
+#Not sure which one that is closer to the color scheme 
+
+
+continent_colors = {
+    "Europe": "#636EFA",
+    "North America": "#EF553B",
+    "Asia": "#00CC96",
+    "Africa": "#AB63FA",
+    "Oceania": "#FFA15A",
+    "South America": "#19D3F3",
+    "Other": "lightgray"
+}
+
+
+fig = go.Figure()
+
+# Setting layout of bubbles and the graph 
+for cont in health_bubble["Continent"].unique():
+    df_cont = health_bubble[health_bubble["Continent"] == cont]
+    fig.add_trace(go.Scatter(
+        x=df_cont["Index_Score "],
+        y=df_cont["Life_Expectancy"],
+        mode="markers+text",
+        name=cont,
+        text=df_cont["Label"],
+        textposition='top center',
+        marker=dict(
+            size=df_cont["Bubble_Size"] * 0.75,
+            sizemode="diameter",
+            color=continent_colors[cont],
+            opacity=0.75,
+            line=dict(width=1, color='gray')
+        ),
+        hovertext=df_cont["hover_text"],
+        hoverinfo='text'
+    ))
+
+## Adding global health reccs from the presentation 
+
+fig.add_trace(go.Scatter(
+    x=[None],
+    y=[None],
+    mode='markers',
+    marker=dict(size=0, color='rgba(0,0,0,0)'),
+    showlegend=True,
+    name="→ Higher Global Health Index = Better Health"
+))
+
+# Figure layout 
+fig.update_layout(
+    title=dict(
+        text="Health Analysis: Global Health Index vs Life Expectancy & Maternal Mortality",
+        font=dict(family="Georgia", size=16)  
+    ),
+    width=750,
+    height=700,
+    xaxis=dict(
+        title="Global Health Index",
+        range=[30, health_bubble["Index_Score "].max()],
+        showgrid=False,
+        tickfont=dict(family="Georgia", size=12) 
+    ),
+    yaxis=dict(
+        title="Life Expectancy (Years)",
+        dtick=2,
+        showgrid=False,
+        tickfont=dict(family="Georgia", size=12)  
+    ),
+    hovermode='closest',
+    plot_bgcolor='white',
+    legend=dict(
+        title="Continent",
+        x=1.02,           
+        y=0,             
+        xanchor='left',
+        yanchor='bottom',
+        font=dict(family="Georgia", size=12),  
+        bgcolor='rgba(255,255,255,0.6)',
+        bordercolor='gray',
+        borderwidth=1
+    ),
+    font=dict(            
+        family="Georgia",
+        size=14  
+    ),
+    annotations=[
+        dict(
+            text="Figure 3.",
+            x=1.69,
+            y=-0.035,
+            showarrow=False,
+            font=dict(size=11),
+            xref="paper",
+            yref="paper",
+            xanchor="center",
+            yanchor="top"
+        )
+    ]
+)
+
+fig.show()
+```
+
+:::
+::::::::::::::
+
+
+<div style="background-color: #ffffff; width: 100vw; margin-left: calc(-50vw + 50%); padding: 2rem 5%;">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## SAFETY (VIOLENCE PREVENTION)
+
+<br>
+
+Safety, especially pertaining to women, must be treated as a paramount factor when evaluating the overall health of a nation.
+
+Women across the globe are subjected to archaic violence inflicting physical and emotional damage. These incidences often go unchecked especially in countries where the societal norm is to treat women as second-class citizens, as an afterthought, or as property. 
+
+This violence is unspeakable, but it is not unpreventable. The job of society is to continue to evolve and place emphasis on the well-being of women and, specifically, for governing bodies to create systems that prevent violence in the first place, and support women when it occurs. Unfortunately, this is not a priority universally, however, there are certain countries doing their part in creating laws and legislation to protect women and young girls and to usher the world into a more safe and modern environment.
+
+The United Nations (UN) works tirelessly to protect human rights with one of its charges being the safety of women. A specific undertaking of theirs is compiling data on the number of measures put into place preventing violence against women and girls [@violencePrev]. They provide comprehensive data on the type of violence, the legislation in place, and the length of its installment.
+
+<br>
+
+</div>
+
+
+:::::::::::::: cr-section
+@cr-safety1
+
+::: {}
+In this Figure we see the aggregation of the UN data, looking particularly at individual countries in terms of how they score for violence prevention against women. 
+
+<br>
+
+We first see the top and bottom 10 ranked countries overall, those with the most laws against violence and those with the least, respectively. Immediately, we see the worst country overall is Uzbekistan with a mere 9 laws and the best country overall is Canada with 172 laws. Canada is closely followed by Austalia, Belgium, France, and India all with over 100 laws in place. Each of these is dominated by laws against domestic violence and general laws for violence against women and girls. They each also have a strong number of sexual harassment, sexual violence, and trafficking preventative measures. 
+
+<br>
+
+On the flip side, Uzbekistan has a few laws for general violence, domestic violence, trafficking, sexual harassment, and child marriage, however, fails to account for any of the other violence types. The bottom 10 countries are dominated by African Countries, followed by Asian Countries. Noticeably, there are no countries from the Western Hemisphere in the bottom rankings. 
+:::
+
+::: {#cr-safety1}
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+# reading in violence data
+violence_data = pd.read_csv("../data/analysis_data/csv_files/violence_prev.csv")
+
+# renaming Femicide_Feminicide to Femicide
+violence_data = violence_data.rename(columns={"Femicide_Feminicide": "Femicide"})
+violence_data = violence_data.rename(columns={"Violence_against_women_and_girls": "Violence_against_Women"})
+violence_data = violence_data.rename(columns={"Child_early_and_forced_marriage": "Child_marriage"})
+
+# drop ISO
+violence_data = violence_data.drop(columns=["ISO"])
+violence_data = violence_data.drop(columns=['Female_genital_mutilation.1'])
+
+# dropping columns with only a few observations
+violence_data = violence_data.drop(columns=['Forced_pregnancy', 'Forced_sterilization', 'Form_Of_Violence', 'Technology-facilitated_violence_against_women'])
+
+# renaming some countries shorter
+violence_data["Country"] = violence_data["Country"].replace({
+  "United States of America": "US",
+  "United Republic of Tanzania": "Tanzania",
+  "United Kingdom of Great Britain and Northern Ireland": "UK",
+  "Lao People's Democratic Republic": "Lao",
+  "Russian Federation": "Russia",
+  "Republic of Moldova": "Moldova"
+})
+
+# melting the data to long format
+violence_data_long = violence_data.melt(
+  id_vars=["Country", "tot_violence"],
+  var_name="Violence_Type",
+  value_name="Count"
+)
+
+# creating the initial plot
+violence_types = violence_data_long["Violence_Type"].unique()
+n_types = len(violence_types)
+fig = go.Figure() # initializing
+
+# top 10 countries for individual violence types plots
+for v_type in violence_types:
+    filtered_df = violence_data_long[violence_data_long["Violence_Type"] == v_type]
+    top10_df = filtered_df.sort_values("Count", ascending=False).head(10) # just the top 10
+    fig.add_trace(go.Bar(
+        x=top10_df["Count"], # x axis
+        y=top10_df["Country"], # y axis
+        orientation="h",
+        name=v_type,
+        visible=False,
+        showlegend=False
+    ))
+
+# sorting to get the top and bottom 10 countries
+bottom10_total_sorted = violence_data.sort_values("tot_violence", ascending=True).head(10)
+bottom10_countries_sorted = bottom10_total_sorted.sort_values("tot_violence", ascending=False)["Country"]
+top10_countries_sorted = violence_data.sort_values("tot_violence", ascending=False).head(10)["Country"]
+combined_countries = pd.concat([top10_countries_sorted, bottom10_countries_sorted]) # combining into one list for plotting
+
+# plotting the stacked bar plot (20 countries)
+for v_type in violence_types:
+    combined_df = violence_data_long[ # using the combined list
+        (violence_data_long["Violence_Type"] == v_type) &
+        (violence_data_long["Country"].isin(combined_countries))
+    ]
+    combined_df = combined_df.groupby("Country").sum().reindex(combined_countries).fillna(0)
+    fig.add_trace(go.Bar(
+        x=combined_df["Count"], # x axis
+        y=combined_df.index, # y axis
+        orientation="h",
+        name=v_type.replace("_", " ").title(),
+        visible=True,  # making the default plot
+        showlegend=True
+    ))
+
+# creating a dashed line between the top and bottom 10 countries for stacked
+separator_line = [dict(
+    type="line",
+    x0=0,
+    x1=1,
+    xref="paper",
+    y0=9.5,  # line between index 9 and 10
+    y1=9.5,
+    yref="y",
+    line=dict(color="black", width=2, dash="dot") # dotted
+)]
+
+dropdown_buttons = [] # initializing the dropdown menu
+# adding the dropdown menu for each of the plots
+for i, v_type in enumerate(violence_types):
+    visibility = [j == i for j in range(n_types)] + [False] * n_types
+    dropdown_buttons.append(dict(
+        label=v_type.replace("_", " ").title(),
+        method="update",
+        args=[
+            {"visible": visibility},
+            {
+                "title": {"text": "Top 10 Countries With Laws Against Specific Violence Type", "y": 0.94},
+                "barmode": "group",
+                "shapes": []  # remove separator line for other views
+            }
+        ]
+    ))
+
+# adds the dropdown option of the stacked bar plot
+stacked_visibility = [False] * n_types + [True] * n_types
+dropdown_buttons.append(dict(
+    label="All Laws Combined (Stacked)",
+    method="update",
+    args=[
+        {"visible": stacked_visibility},
+        {
+            "title": {"text": "Top & Bottom 10 Countries by Laws Against Violence", "y": 0.94},
+            "barmode": "stack",
+            "shapes": separator_line  # this adds the line only in this view
+        }
+    ]
+))
+
+# making the stacked bar plot the default plot
+for i, trace in enumerate(fig.data):
+    trace.visible = stacked_visibility[i]
+
+# updating the layout and appearance
+fig.update_layout(
+    updatemenus=[dict(
+        active=len(dropdown_buttons) - 1, # dropdown
+        buttons=dropdown_buttons,
+        x=0.42, # location of dropdown
+        y=1.12,
+        xanchor="center",
+        yanchor="top"
+    )],
+    title={"text": "Bottom & Top 10 Countries Stacked by Violence Type", "y": 0.94},
+    xaxis_title="Total Number of Violence Prevention Laws",
+    yaxis_title="Country",
+    height=600,
+    width=700,
+    template="plotly_white",
+    barmode='stack',
+    shapes=separator_line,
+    font=dict(         
+        family="Georgia",
+        size=16         
+    ),
+    annotations=[
+        dict(
+            text="Figure 4.",
+            x=1.6,
+            y=-0.065,
+            showarrow=False,
+            font=dict(size=11),
+            xref="paper",
+            yref="paper",
+            xanchor="center",
+            yanchor="top"
+        )
+    ]
+)
+
+fig.show() # displaying the interactive plot
+```
+:::
+
+@cr-safety2
+
+:::{}
+We then can peruse through each of the violence types individually and view the best 10 countries for that category. The overall trend is that European countries tend to provide the most number of prevention laws. With the highest number of countries in the top 10, they lead all of the violence categories except for general violence against women and girls, which is a tie. Interestingly, Canada is only the top country for domestic violence and has no laws for female genital mutilation and femicide. 
+:::
+
+::: {#cr-safety2}
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+
+# reading in violence data
+violence_data = pd.read_csv("../data/analysis_data/csv_files/violence_prev.csv")
+
+# renaming Femicide_Feminicide to Femicide
+violence_data = violence_data.rename(columns={"Femicide_Feminicide": "Femicide"})
+violence_data = violence_data.rename(columns={"Violence_against_women_and_girls": "Violence_against_Women"})
+violence_data = violence_data.rename(columns={"Child_early_and_forced_marriage": "Child_marriage"})
+
+# drop ISO
+violence_data = violence_data.drop(columns=["ISO"])
+violence_data = violence_data.drop(columns=['Female_genital_mutilation.1'])
+
+# dropping columns with only a few observations
+violence_data = violence_data.drop(columns=['Forced_pregnancy', 'Forced_sterilization', 'Form_Of_Violence', 'Technology-facilitated_violence_against_women'])
+
+# renaming some countries shorter
+violence_data["Country"] = violence_data["Country"].replace({
+  "United States of America": "US",
+  "United Republic of Tanzania": "Tanzania",
+  "United Kingdom of Great Britain and Northern Ireland": "UK",
+  "Lao People's Democratic Republic": "Lao",
+  "Russian Federation": "Russia",
+  "Republic of Moldova": "Moldova"
+})
+
+# melting the data to long format
+violence_data_long = violence_data.melt(
+  id_vars=["Country", "tot_violence"],
+  var_name="Violence_Type",
+  value_name="Count"
+)
+
+# creating the initial plot
+violence_types = violence_data_long["Violence_Type"].unique()
+n_types = len(violence_types)
+fig = go.Figure() # initializing
+
+# top 10 countries for individual violence types plots
+for v_type in violence_types:
+    filtered_df = violence_data_long[violence_data_long["Violence_Type"] == v_type]
+    top10_df = filtered_df.sort_values("Count", ascending=False).head(10)
+    fig.add_trace(go.Bar(
+        x=top10_df["Count"],
+        y=top10_df["Country"],
+        orientation="h",
+        name=v_type,
+        visible=False,
+        showlegend=False
+    ))
+
+# sorting to get the top and bottom 10 countries
+bottom10_total_sorted = violence_data.sort_values("tot_violence", ascending=True).head(10)
+bottom10_countries_sorted = bottom10_total_sorted.sort_values("tot_violence", ascending=False)["Country"]
+top10_countries_sorted = violence_data.sort_values("tot_violence", ascending=False).head(10)["Country"]
+combined_countries = pd.concat([top10_countries_sorted, bottom10_countries_sorted]) # combining into one list for plotting
+
+# plotting the stacked bar plot (20 countries)
+for v_type in violence_types:
+    combined_df = violence_data_long[ # using the combined list
+        (violence_data_long["Violence_Type"] == v_type) &
+        (violence_data_long["Country"].isin(combined_countries))
+    ]
+    combined_df = combined_df.groupby("Country").sum().reindex(combined_countries).fillna(0)
+    fig.add_trace(go.Bar(
+        x=combined_df["Count"], # x axis
+        y=combined_df.index, # y axis
+        orientation="h",
+        name=v_type.replace("_", " ").title(),
+        visible=True,  # making this the default plot
+        showlegend=True
+    ))
+
+dropdown_buttons = [] # initializing the dropdown menu
+# adding the dropdown menu for each of the plots
+for i, v_type in enumerate(violence_types):
+    visibility = [j == i for j in range(n_types)] + [False] * n_types
+    dropdown_buttons.append(dict(
+        label=v_type.replace("_", " ").title(),
+        method="update",
+        args=[
+            {"visible": visibility},
+            {
+                "title": {"text": "Top 10 Countries With Laws Against Specific Violence Type", "y": 0.94},
+                "barmode": "group",
+                "shapes": []  # remove separator line for other views
+            }
+        ]
+    ))
+
+# adds the dropdown option of the stacked bar plot
+stacked_visibility = [False] * n_types + [True] * n_types
+dropdown_buttons.append(dict(
+    label="All Laws Combined (Stacked)",
+    method="update",
+    args=[
+        {"visible": stacked_visibility},
+        {
+            "title": {"text": "Top & Bottom 10 Countries by Laws Against Violence", "y": 0.94},
+            "barmode": "stack",
+            "shapes": separator_line  # this adds the line only in this view
+        }
+    ]
+))
+
+# making the domestic violence plot the default plot
+default_index = list(violence_types).index("Domestic_violence")
+for i, trace in enumerate(fig.data):
+    trace.visible = (i == default_index)
+
+# updating the layout and appearance
+fig.update_layout(
+    updatemenus=[dict(
+        active=default_index, # dropdown
+        buttons=dropdown_buttons,
+        x=0.42, # location of dropdown
+        y=1.12,
+        xanchor="center",
+        yanchor="top"
+    )],
+    title={"text": "Top 10 Countries With Laws Against Domestic Violence", "y": 0.94},
+    xaxis_title="Total Number of Violence Prevention Laws",
+    yaxis_title="Country",
+    height=600,
+    width=700,
+    template="plotly_white",
+    barmode='stack',
+    font=dict(        
+        family="Georgia",
+        size=16          
+    ),
+    annotations=[
+        dict(
+            text="Figure 4.",
+            x=0.95,
+            y=-0.065,
+            showarrow=False,
+            font=dict(size=11),
+            xref="paper",
+            yref="paper",
+            xanchor="center",
+            yanchor="top"
+        )
+    ]
+)
+
+fig.show() # displaying the interactive plot
+```
+:::
+
+:::{}
+Overall, while the number of laws and preventative measures may not directley correlate with female safety, they remain an important factor in supporting women’s well-being and offer insight into a country’s governmental stance on women.
+:::
+
+::::::::::::::
+
+
+<div style="background-color: #ffffff; width: 100vw; margin-left: calc(-50vw + 50%); padding: 2rem 5%;">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+Now that you have examined the individual metrics, you will have the opportunity to see how they work together and discover where the best place is to live as a woman.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+
+## FINAL MAP
+
+#### Finding your Ideal Home: A Personalized Approach
+
+Throughout our journey, we've explored the four pillars that shape women's experiences around the world: economic empowerment and educational opportunity, political representation, health outcomes, and safety from violence. Now, it's time to bring these insights together and discover which countries might align best with your personal priorities.
+
+Everyone's needs and values are different. What matters most to you? Is access to higher education your top concern? Or maybe laws protecting women from violence? Are maternal health outcomes your priority?
+
+The interactive tool below allows you to select the factors that matter most to you. By holding down Command (or Ctrl on Windows) while clicking, you can choose multiple metrics that align with your priorities. The map will then highlight the top 10 countries based on your selections, caclculated using a normalized average score.
+
+For a deeper understanding, click on any highlighted country to see how it compares to global averages across your selected metrics. The table below the visualization provides detailed values for each metric in the top-performing countries.
+
+Your journey to finding your ideal home or travel destination begins with understanding what matters most to you. Let's explore the possibilities together.
+
+```{ojs}
+country_data = FileAttachment("../data/common_files/merged_geojson.geojson").json();
+
+// source: https://observablehq.com/documentation/inputs/overview
+column_name_mapping = [
+  {name:"Primary School Enrollment Parity", metric:"Primary_Enrollment"},
+  {name:"Secondary School Enrollment Parity", metric:"Secondary_Enrollment"},
+  {name:"Tertiary School Enrollment Parity", metric:"Tertiary_Enrollment"},
+  {name:"Expected Years in School for Women", metric:"female_expected_school_years"},
+  {name:"Global Health Index", metric:"Global_Health_Index_Score "},
+  {name:"Female Life Expectancy at Birth", metric:"Life_expectancy_at_birth"},
+  {name:"Female Life Expectancy at Age 60", metric:"Life_expectancy_at_age_60"},
+  {name:"Political Empowerment Index", metric:"political_empow_index"},
+  {name:"Laws Related to Childhood and Forced Marriage", metric:"Child_early_and_forced_marriage"},
+  {name:"Laws Related to Domestic Violence", metric:"Domestic_violence"},
+  {name:"Laws Related to Forced Pregnancy", metric:"Forced_pregnancy"},
+  {name:"Laws Related to Sexual Harassment", metric:"Sexual_harassment"},
+  {name:"Laws Related to Sexual Violence", metric:"Sexual_violence"},
+  {name:"Laws Related to Stalking", metric:"Stalking"},
+  {name:"Laws Related to Trafficking", metric:"Trafficking"},
+  {name:"Number of Laws Related to Violence Against Women", metric:"tot_violence"},
+  {name:"Maternal Mortality Rate", metric:"MMR"},
+  {name:"Female Labor Rate", metric:"Female_Labor_Rate_Percent"}
+]
+
+viewof metrics = Inputs.select(column_name_mapping, {
+  label: "Select metics", 
+  format: x => x.name, 
+  value:["Primary School Enrollment Parity"],
+  multiple: true
+  });
+
+selected_metric_keys = metrics.map(d => d.metric);
+
+// viewof calculateScore = Inputs.button("Calculate Score");
+
+top10_countries = (() => {
+  const features = country_data.features.map(feature => {
+    const values = selected_metric_keys.map(key => feature.properties[key]);
+    const validValues = values.filter(d => d != null);
+    const avg = validValues.length > 0 ? d3.mean(validValues) : null;
+
+    return {
+      ...feature,
+      properties: {
+        ...feature.properties,
+        composite_score: avg
+      }
+    };
+  });
+
+  // Sort by score descending and get top 10
+  return features
+    .filter(f => f.properties.composite_score != null)
+    .sort((a, b) => d3.descending(a.properties.composite_score, b.properties.composite_score))
+    .slice(0, 10);
+})();
+```
+
+```{ojs}
+plt = require("https://cdn.plot.ly/plotly-latest.min.js")
+
+
+mutable selectedCountryName = top10_countries.length > 0 ? top10_countries[0].properties.ADMIN : "No data";
+
+
+// Create a viewof cell that exposes the mutable variable as a reactive input
+viewof selectedCountry = {
+ const container = html`<div>
+   <label><b>Selected Country: </b></label>
+   <span>${selectedCountryName}</span>
+ </div>`;
+  return Object.defineProperty(container, "value", {
+   get: () => selectedCountryName
+ });
+}
+
+
+// Map visualization
+viewof mapViz = {
+ const country_names = top10_countries.map(d => d.properties.ADMIN);
+ const composite_scores = top10_countries.map(d => d.properties.composite_score);
+
+
+ const highlight_layer = {
+   type: "choropleth",
+   locationmode: "country names",
+   locations: country_names,
+   z: composite_scores,
+   colorscale: "YlOrRd",
+   colorbar: { title: "Composite Score" },
+   marker: { line: { color: "#444", width: 0.5 } },
+   hoverinfo: "location+z",
+   zmin: Math.min(...composite_scores),
+   zmax: Math.max(...composite_scores)
+ };
+  const base_layer = {
+   type: "choropleth",
+   locationmode: "country names",
+   locations: country_data.features.map(f => f.properties.ADMIN),
+   z: Array(country_data.features.length).fill(0),
+   colorscale: [[0, "#f0f0f0"], [1, "#f0f0f0"]],
+   showscale: false,
+   marker: { line: { color: "#ccc", width: 0.5 } },
+   hoverinfo: "location"
+ };
+
+
+ const layout = {
+   title: {
+     text: "Top 10 Countries (Click to see details)",
+     font: {
+       family: "Georgia, serif", // Title font
+       size: 24
+     }
+   },
+   geo: {
+     projection: { type: "natural earth" },
+     showframe: false,
+     showcoastlines: true,
+     coastlinecolor: "#ccc"
+   },
+   height: 500,
+   width: 600,
+   margin: {
+     l: 0,
+     r: 0,
+     t: 50, // Increased top margin for title
+     b: 0
+   }
+ };
+
+
+ const div = DOM.element("div");
+ plt.newPlot(div, [base_layer, highlight_layer], layout);
+
+
+ div.on("plotly_click", event => {
+   if (event.points && event.points[0].location) {
+     mutable selectedCountryName = event.points[0].location;
+     div.dispatchEvent(new CustomEvent("input"));
+   }
+ });
+
+
+ return div;
+}
+
+
+// Bar chart visualization
+viewof barChartViz = {
+ return countryBarChart(selectedCountryName);
+}
+
+
+viewof dashboard = {
+ const container = html`<div class="dashboard-container">
+   <div></div>
+   <div></div>
+ </div>`;
+  container.children[0].append(mapViz);
+ container.children[1].append(barChartViz);
+  return container;
+}
+
+
+function countryBarChart(countryName) {
+ const countryFeature = country_data.features.find(f => f.properties.ADMIN === countryName);
+ if (!countryFeature) return htl.html`<p>Country data not found</p>`;
+  const metricValues = [];
+ const globalAverages = [];
+  for (const { name, metric } of metrics) {
+   const value = countryFeature.properties[metric];
+   const allValues = country_data.features.map(f => f.properties[metric]).filter(v => v != null);
+   const globalAvg = allValues.length > 0 ? d3.mean(allValues) : null;
+  
+   if (value != null && globalAvg != null) {
+     metricValues.push({ metric: name, value: value });
+     globalAverages.push({ metric: name, value: globalAvg });
+   }
+ }
+  const countryCompositeScore = d3.mean(metricValues.map(d => d.value));
+ const globalCompositeScore = d3.mean(globalAverages.map(d => d.value));
+  metricValues.push({ metric: "Composite Score", value: countryCompositeScore });
+ globalAverages.push({ metric: "Composite Score", value: globalCompositeScore });
+  const formatMetricName = (metricName) => {
+   if (metricName.length > 20) {
+     const middle = Math.floor(metricName.length / 2);
+     let breakPoint = metricName.indexOf(' ', middle);
+     if (breakPoint === -1) {
+       breakPoint = metricName.lastIndexOf(' ', middle);
+     }
+     if (breakPoint === -1) {
+       return metricName;
+     }
+     return metricName.substring(0, breakPoint) + '<br>' + metricName.substring(breakPoint + 1);
+   }
+   return metricName;
+ };
+  const formattedMetricNames = metricValues.map(d => formatMetricName(d.metric));
+  const countryTrace = {
+   x: formattedMetricNames,
+   y: metricValues.map(d => d.value),
+   type: 'bar',
+   name: countryName,
+   marker: { color: 'rgba(79, 195, 178, 0.8)' }
+ };
+  const globalTrace = {
+   x: formattedMetricNames,
+   y: globalAverages.map(d => d.value),
+   type: 'bar',
+   name: 'Global Average',
+   marker: { color: 'rgba(240, 113, 103, 0.8)' }
+ };
+  const layout = {
+   title: {
+     text: `${countryName} and Global Average for Selected Metrics`,
+     font: {
+       family: "Georgia, serif", // Title font
+       size: 20
+     }
+   },
+   xaxis: {
+     title: 'Metrics',
+     tickangle: -60,
+     tickmode: 'array',
+     tickvals: formattedMetricNames,
+     ticktext: formattedMetricNames,
+     titlefont: { family: "Georgia, serif", size: 14 } // Axis label font
+   },
+   yaxis: {
+     title: 'Values',
+     titlefont: { family: "Georgia, serif", size: 16 } // Axis label font
+   },
+   barmode: 'group',
+   height: 500,
+   width: 600,
+   margin: { b: 180, l: 50, r: 50, t: 50 },
+   legend: { x: 1.05, y: 0.5, orientation: 'v' }
+ };
+  const div = DOM.element('div');
+ plt.newPlot(div, [countryTrace, globalTrace], layout);
+  return div;
+}
+```
+
+
+```{ojs}
+// Layout container as two separate cells instead of trying to combine them
+html`<style>
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 1200px) {
+    .dashboard-container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>`
+```
+
+
+```{ojs}
+Inputs.table(
+  top10_countries.map(d => {
+    const row = {
+      Country: d.properties.ADMIN
+    };
+    for (const { name, metric } of metrics) {
+      row[name] = d.properties[metric];
+    }
+    row["Composite Score"] = d3.format(".2f")(d.properties.composite_score);
+    return row;
+  }),
+  {
+    columns: ["Country", ...metrics.map(d => d.name), "Composite Score"],
+    sort: "Composite Score",
+    reverse: true
+  }
+)
+```
+
+<br>
+<br>
+<br>
+<br>
+
+#### Beyond the Numbers: Making Your Decision
+
+This tool is more than just numbers. It's a window into new possibilities. By selecting the factors most important to you, you’ve created a personalized view of the countries where women are best supported across key dimensions of opportunity, health, safety, and representation.
+
+While these results offer a valuable starting point, they are only part of the full picture. National averages can highlight trends, but lived experiences vary widely by region, city, and community. As you consider your options, we encourage you to supplement this data with deeper research. This could mean anything from understanding local policies to hearing directly from women who live in these places.
+
+Still, data can be a powerful tool for decision-making. By focusing on the areas that align with your priorities, you can make more informed decisions about where to build your next chapter, whether that's moving, traveling, or simply imaginging new possibilities.
+
+Wherever your journey leads, we hope this tool inspires you to move forward with clarity, confidence, and excitement about the future you can create.
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div id="refs">
+  <h2 style="font-family: Georgia, serif; margin-top: 0;">References</h2>
+  <!-- references will be injected here by citeproc or Observable -->
+</div>

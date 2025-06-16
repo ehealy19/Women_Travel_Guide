@@ -1,0 +1,72 @@
+Country,Year,Life_expectancy_at_birth,Life_expectancy_at_age_60,ISO
+Albania,2019,79.9,21.9,ALB
+Argentina,2019,79.5,23.1,ARG
+Australia,2019,84.8,26.8,AUS
+Austria,2019,83.8,25.6,AUT
+Bahrain,2019,77.0,19.4,BHR
+Belgium,2019,83.5,25.6,BEL
+Bulgaria,2019,78.6,22.0,BGR
+Burkina Faso,2019,65.2,18.1,BFA
+Cote d'Ivoire,2019,65.8,18.7,CIV
+Canada,2019,84.1,26.4,CAN
+Chile,2019,83.2,25.9,CHL
+Colombia,2019,81.9,25.3,COL
+Costa Rica,2019,83.4,26.4,CRI
+Croatia,2019,81.6,23.7,HRV
+Cyprus,2019,85.1,26.4,CYP
+Czechia,2019,81.9,24.0,CZE
+Denmark,2019,83.0,24.9,DNK
+Ecuador,2019,80.5,24.3,ECU
+Estonia,2019,82.6,25.0,EST
+Finland,2019,84.0,25.8,FIN
+France,2019,85.1,27.2,FRA
+Gabon,2019,69.7,19.3,GAB
+Georgia,2019,77.8,21.0,GEO
+Germany,2019,84.8,26.9,DEU
+Ghana,2019,69.2,18.9,GHA
+Greece,2019,83.6,25.5,GRC
+Guinea,2019,62.3,17.2,GIN
+Hungary,2019,79.6,22.3,HUN
+Iceland,2019,83.9,25.5,ISL
+India,2019,72.2,19.5,IND
+Ireland,2019,83.5,25.3,IRL
+Israel,2019,84.4,26.0,ISR
+Italy,2019,84.9,26.5,ITA
+Jordan,2019,78.8,22.1,JOR
+Kazakhstan,2019,77.6,21.4,KAZ
+Kyrgyzstan,2019,77.3,21.7,KGZ
+Lao People's Democratic Republic,2019,70.9,18.9,LAO
+Latvia,2019,79.8,23.0,LVA
+Lithuania,2019,80.4,23.5,LTU
+Malaysia,2019,77.1,20.6,MYS
+Malta,2019,83.8,25.9,MLT
+Mauritius,2019,77.3,22.0,MUS
+Mexico,2019,78.9,23.1,MEX
+Mongolia,2019,72.8,18.5,MNG
+Montenegro,2019,78.7,21.3,MNE
+Morocco,2019,74.3,19.6,MAR
+Nepal,2019,72.7,19.2,NPL
+New Zealand,2019,83.5,25.8,NZL
+North Macedonia,2019,76.9,19.6,MKD
+Norway,2019,84.1,25.8,NOR
+Pakistan,2019,66.7,17.8,PAK
+Philippines,2019,73.6,19.6,PHL
+Poland,2019,81.9,24.3,POL
+Portugal,2019,84.4,26.3,PRT
+Republic of Moldova,2019,77.1,20.9,MDA
+Romania,2019,79.3,22.4,ROU
+Russian Federation,2019,78.0,22.2,RUS
+Saudi Arabia,2019,76.1,20.8,SAU
+Senegal,2019,70.1,18.9,SEN
+Serbia,2019,78.3,21.1,SRB
+Slovakia,2019,81.4,23.9,SVK
+Slovenia,2019,84.1,25.6,SVN
+South Africa,2019,68.3,20.5,ZAF
+Spain,2019,85.7,27.3,ESP
+Sweden,2019,84.0,25.6,SWE
+Switzerland,2019,85.1,26.6,CHE
+Thailand,2019,81.0,24.8,THA
+United Kingdom of Great Britain and Northern Ireland,2019,83.0,25.2,GBR
+United Republic of Tanzania,2019,69.3,19.1,TZA
+United States of America,2019,80.7,24.4,USA
+Uzbekistan,2019,75.2,19.8,UZB
